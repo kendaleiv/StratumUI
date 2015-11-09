@@ -20,6 +20,9 @@ $msg-alert-box:     lighten($msg-alert,20%);
 $msg-warning-box:   lighten($msg-warning,20%);
 $msg-info-box:      lighten($msg-info,20%);
 
+// Fonts
+$body-font:     'sans-serif';
+
 // Set up golden ratio
-$root-font-size:    62.5%;
-$base-font-size:    14;
+$root-font-size: 62.5%;
+$base-font-size: 14;
