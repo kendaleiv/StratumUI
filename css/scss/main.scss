@@ -9,4 +9,17 @@
 @import "normalize";
 
 // Load mixins manifest
-@import "mixins";.
+@import "mixins";
+
+// Load elements
+// --- Do not load if using on top of another framework. --- //
+@import "elements";
+
+// Load components
+@import "
+  typography,
+  grid,
+  cards,
+  messages,
+  helpers
+";

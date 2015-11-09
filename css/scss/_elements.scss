@@ -1,0 +1,93 @@
+// HTML5
+header, section, footer, aside, nav, article, figure {
+  display: block;
+}
+
+html, body {height: 100%;}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-family: $body-font, sans-serif;
+  // font-size: 14px;
+}
+
+// Wrap in our major classes
+.ebroker-quote-header,
+.ebroker-init-demographics,
+.ebroker-quote-panel,
+.ebroker-filter-panel {
+  menu { list-style: none; }
+
+  section {
+    background-color: $white;
+    padding: 1em 0 3em 0;
+    }
+
+  h1,h2,h3,h4 {
+    border: none;
+    color: $black;
+    font-family: $headline-font, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5em;
+  }
+
+  p, li, a, dd, dt, em {
+    font-family: $body-font, sans-serif;
+    color: $black;
+    font-size: 14px;
+    max-width: 100%;
+    line-height: 1.8em;
+  }
+
+  a {
+    color: $helpblue;
+    text-decoration: none;
+    @include transition(all,0.3s);
+    &:hover {text-decoration: underline;}
+  }
+
+  p a { text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+
+  ul, ol {
+    margin-left: 0;
+    padding-left: 1.5em;
+  }
+
+  dl {
+    margin-left: 0;
+    padding-left: 0;
+    dt {
+      color: $darkblue;
+      font-weight: bold;
+      padding: 0.3em 0;
+    }
+    dd {
+      margin: 0;
+    }
+  }
+
+  button {
+    overflow: visible;
+    border: 0;
+    font-family: $body-font, sans-serif;
+    -webkit-font-smoothing: inherit;
+    letter-spacing: inherit;
+    background: none;
+    cursor: pointer;
+  }
+
+  small {line-height: 0.1em;}
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

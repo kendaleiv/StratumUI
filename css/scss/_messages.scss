@@ -1,0 +1,40 @@
+
+.st-alert {color: $red;}
+.st-alert-box {
+  @include alert-box($red);
+}
+.st-alert-status {
+  @include alert-box($red);
+  width: auto;
+  margin: 1em 3em;
+}
+
+.st-success {color: $green;}
+.st-success-box {
+  @include alert-box($green);
+}
+.st-success-status {
+  @include alert-box($green);
+  width: auto;
+  margin: 1em 3em;
+}
+
+.st-warning {color: $warning;}
+.st-warning-box {
+  @include alert-box($warning);
+}
+.st-warning-status {
+  @include alert-box($warning);
+  width: auto;
+  margin: 1em 3em;
+}
+
+.st-info {color: $helpblue;}
+.st-info-box {
+  @include alert-box($helpblue);
+}
+
+.st-default {color: $darkblue;}
+.st-default-box {
+	@include alert-box($mediumblue);
+}
