@@ -8,3 +8,10 @@ $desktop:        1200px;
 $tablet:         991px;
 $tablet-sm:      765px;
 $phone:          480px;
+
+$breakpoint--desktop-xl:     2000px; //card-count 8
+$breakpoint--desktop-large:  1600px; //card-count 6
+$breakpoint--desktop:        1200px; //card-count 4
+$breakpoint--tablet:         991px;  //card-count 3
+$breakpoint--tablet-sm:      765px;  //card-count 2
+$breakpoint--phone:          480px;  //card-count 1

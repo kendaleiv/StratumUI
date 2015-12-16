@@ -1,46 +1,46 @@
 // General classes
-.st-left {float: left;}
-.st-right {float: right;}
-.st-none {float: none;}
+.left {float: left;}
+.right {float: right;}
+.none {float: none;}
 
-.st-inline {display: inline-block;}
+.inline {display: inline-block;}
 
-.st-text-left {text-align: left;}
-.st-text-right {text-align: right;}
-.st-text-center {text-align: center;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
 
-.st-no-border {border: none;}
-.st-no-margin {margin: 0;}
-.st-no-padding {padding: 0;}
+.no-border {border: none;}
+.no-margin {margin: 0;}
+.no-padding {padding: 0;}
 
-.st-fixed {position: fixed;}
+.fixed {position: fixed;}
 
-.st-group {
+.group {
   display: inline-block;
   @extend %clearfix;
 }
 
-.st-floor {
+.floor {
   position: absolute;
   bottom: 0;
   vertical-align: bottom;
 }
 
 // padding
-.st-pad-5 {padding: 5px;}
-.st-pad-10 {padding: 10px;}
-.st-pad-20 {padding: 20px;}
-.st-pad-1 {padding: 1em;}
-.st-pad-2 {padding: 2em;}
-.st-pad-3 {padding: 3em;}
+.pad-5 {padding: 5px;}
+.pad-10 {padding: 10px;}
+.pad-20 {padding: 20px;}
+.pad-1 {padding: 1em;}
+.pad-2 {padding: 2em;}
+.pad-3 {padding: 3em;}
 
 // margin
-.st-margin-tb-20 {margin: 20px auto;}
-.st-margin-tb-1 {margin: 1em auto;}
-.st-margin-tb-2 {margin: 2em auto;}
-.st-margin-tb-3 {margin: 3em auto;}
+.margin-tb-20 {margin: 20px auto;}
+.margin-tb-1 {margin: 1em auto;}
+.margin-tb-2 {margin: 2em auto;}
+.margin-tb-3 {margin: 3em auto;}
 
-.st-list-inline {
+.list-inline {
   li {
     display: inline-block;
     float: left;
@@ -50,13 +50,13 @@
   }
 }
 
-.st-list-style-none {
+.list-style-none {
   list-style: none;
 }
 
 // Geniric box
 // Normalize h* tags for generic message boxes
-.st-generic-box {
+.generic-box {
   h2, h3 {
     line-height: 1em;
     margin-bottom: 0.5em;
@@ -64,41 +64,41 @@
 }
 
 // Button helpers
-.st-btn-small {
+.btn-small {
   font-size: inherit;
   padding: 7px;
 }
-.st-btn-medium {
+.btn-medium {
   font-size: 120%;
   //padding: 10px 15px;
 }
-.st-btn-large {
+.btn-large {
   font-size: 170%;
   font-weight: bold;
   letter-spacing: 1px;
   padding: 10px;
 }
-.st-btn-plain {
+.btn-plain {
   &:hover {
     text-decoration: none;
   }
 }
 
 // inputs and selects
-.st-input-large {
+.input-large {
   font-size: 120%;
   padding: 0.5em;
 }
-.st-input-xlarge {
+.input-xlarge {
   font-size: 170%;
   padding: 0.7em;
 }
 
-.st-select-small {
+.select-small {
   height: 40px;
   line-height: normal;
 }
-.st-select-xlarge {
+.select-xlarge {
   font-size: 170%;
   line-height: normal;
   padding: 0.7em;
@@ -106,20 +106,20 @@
 
 // Display across views
 
-.st-display-block {display: block;}
+.display-block {display: block;}
 
 // Do not show on desktop and HD
 @media (max-width: 1200px){
-  .st-not-desktop {display: none;}
+  .not-desktop {display: none;}
 }
 @media (min-width: 1200px){
-  .st-only-desktop {display: none;}
+  .only-desktop {display: none;}
 }
 
 // Do not show on mobile // 992 here
 @media (max-width: 992px){
-  .st-not-mobile {display: none;}
+  .not-mobile {display: none;}
 }
 @media (min-width: 992px){
-  .st-only-mobile {display: none;}
+  .only-mobile {display: none;}
 }

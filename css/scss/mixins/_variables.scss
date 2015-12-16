@@ -1,12 +1,13 @@
-// Typography
-
-// Colors
+/// Colors
 // Greyscale
 $grey:          #999;
 $grey-dark:     #333;
 $grey-light:    #ccc;
 $grey-lighter:  #efefef;
 $grey-lightest: #f9f9f9;
+
+// System colors
+
 
 // Messages and alerts
 $msg-success:   #008000;
@@ -15,14 +16,10 @@ $msg-warning:   #daa520;
 $msg-info:      #1e90ff;
 
 // Messages and alert boxes
-$msg-success-box:   lighten($msg-success,20%);
-$msg-alert-box:     lighten($msg-alert,20%);
-$msg-warning-box:   lighten($msg-warning,20%);
-$msg-info-box:      lighten($msg-info,20%);
+$msg--success-box:   lighten($msg-success,20%);
+$msg--alert-box:     lighten($msg-alert,20%);
+$msg--warning-box:   lighten($msg-warning,20%);
+$msg--info-box:      lighten($msg-info,20%);
 
 // Fonts
 $body-font:     'sans-serif';
-
-// Set up golden ratio
-$root-font-size: 62.5%;
-$base-font-size: 14;

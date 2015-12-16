@@ -1,0 +1,163 @@
+@mixin ebroker-btn ($background-color,$font-color, $icon, $position : before) {
+  background: $background-color;
+  color: $font-color !important;
+	cursor: pointer;
+  font-family: $body-font;
+  margin: 5px;
+  padding: 5px 7px;
+  vertical-align: bottom;
+  @if #{$icon} != null {
+    @include ebroker-icon($position,$icon);
+  }
+}
+
+@mixin ebroker-icon($position: before, $icon: false, $styles: true, $float:null) {
+  &:#{$position} {
+    @if $icon {
+      content: "#{map-get($icons, $icon)}";
+    }
+    @if $styles {
+			font-family: "Fontawesome";
+			font-size: 14px;
+			font-style: normal;
+			line-height: 1em;
+      vertical-align: middle;
+      @if $position == "before" {
+  			padding-right: 10px;
+      } @else {
+        padding-left: 10px;
+      }
+      @if $float != null {
+        float: $float;
+        margin-top: 3%;
+      }
+    }
+    @content;
+  }
+}
+
+@mixin alert-box($color) {
+  color: darken($color,10%) !important;
+  @if $color == $red {
+    background: lighten($color,25%);
+  } @else {
+    background: lighten($color,35%);
+  }
+  border: 1px solid $color;
+	font-weight: normal !important;
+	margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+
+@mixin square($dim) {
+  width: $dim;
+  height: $dim;
+}
+
+@mixin bg-size($w, $h: null) {
+  @if $h == null {              // use $w to set background to "cover"
+  -webkit-background-size: $w;
+     -moz-background-size: $w;
+      -ms-background-size: $w;
+       -o-background-size: $w;
+          background-size: $w;
+  } @else {
+  -webkit-background-size: $w $h;
+     -moz-background-size: $w $h;
+      -ms-background-size: $w $h;
+       -o-background-size: $w $h;
+          background-size: $w $h;
+  }
+}
+
+@mixin icon($size) {
+  display: inline-block;
+  @include square($size);
+  @include hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include bg-size(100%, auto);
+}
+
+@mixin border-radius($tl, $tr: null, $br: null, $bl: null) {
+  @if $tr == null {
+    -webkit-border-radius: $tl;
+       -moz-border-radius: $tl;
+         -o-border-radius: $tl;
+            border-radius: $tl;
+  } @else {
+    -webkit-border-radius: $tl $tr $br $bl;
+       -moz-border-radius: $tl $tr $br $bl;
+         -o-border-radius: $tl $tr $br $bl;
+            border-radius: $tl $tr $br $bl;
+  }
+}
+
+@mixin text-shadow($x, $y, $blur, $color) {
+  -webkit-text-shadow: $x $y $blur $color;
+     -moz-text-shadow: $x $y $blur $color;
+       -o-text-shadow: $x $y $blur $color;
+          text-shadow: $x $y $blur $color;
+}
+
+@mixin box-shadow($x, $y: null, $blur: null, $color: null) {
+  @if $y == null {
+  -webkit-box-shadow: $x;
+     -moz-box-shadow: $x;
+       -o-box-shadow: $x;
+          box-shadow: $x;
+  } @else {
+  -webkit-box-shadow: $x $y $blur $color;
+     -moz-box-shadow: $x $y $blur $color;
+       -o-box-shadow: $x $y $blur $color;
+          box-shadow: $x $y $blur $color;
+  }
+}
+
+@mixin transition($style, $duration, $ease: ease-in-out, $delay: 0s) {
+  -webkit-transition: $style $duration $ease;
+     -moz-transition: $style $duration $ease;
+       -o-transition: $style $duration $ease;
+          transition: $style $duration $ease;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+     -moz-transform: rotate($deg);
+      -ms-transform: rotate($deg);
+       -o-transform: rotate($deg);
+          transform: rotate($deg);
+}
+
+@mixin origin($set: top left) {
+  -webkit-transform-origin: $set;
+     -moz-transform-origin: $set;
+      -ms-transform-origin: $set;
+       -o-transform-origin: $set;
+          transform-origin: $set;
+}
+
+@mixin opacity($decimal,$int) {
+  -khtml-opacity: $decimal;
+    -moz-opacity: $decimal;
+         opacity: $decimal;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$int)";
+      filter: alpha(opacity=$int);
+}
+
+@mixin truncate ($max-width: 250px) {
+  max-width: $max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin avatar-round($dim, $border-color) {
+  @include border-radius(50%);
+  border: 2px solid $border-color;
+  width: $dim;
+  height: $dim;
+  @content;
+}
