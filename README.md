@@ -63,11 +63,13 @@ double horizontal | `class="card double horizontal"` | Re-flows surrounding card
 double vertical | `class="card double vertical"`| Floats left
 double vertical right | `class="card double vertical right"`| Floats right
 
-> **NOTE:** `vertical` **can only be placed left or right within the parent layout.**
+> `vertical` **can only be placed left or right within the parent layout.**
 
 ### Content
 
-Card content is broken into `--title` and `--body` containers. Long content will scroll within the `card--body` container.
+Card content is broken into `--title`, `--body` and `--bar` containers. Long content will scroll within the `card--body` container. The `--bar` container allows quick section access for the user and should always be included.
+
+> Using a double-width Card? Don't forget to add `double` class to `card--bar`
 
 ```html
   <div class="card">
@@ -76,6 +78,10 @@ Card content is broken into `--title` and `--body` containers. Long content will
     </div>
     <div class="card--body">
       Content.
+    </div>
+    <div class="card--bar">
+      View more
+      <i class="fa fa-chevron-right"></li>
     </div>
   </div>
 ```
