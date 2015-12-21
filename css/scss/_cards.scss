@@ -1,0 +1,97 @@
+.card {
+  background: $card--background-color;
+  @include border(right);
+  @include border(bottom);
+  display: inline-block;
+  float: left;
+  @extend %scrollbar;
+  @extend %clearfix;
+  @include square($card-size);
+  @include transition(all, 0.1s);
+  .card--title {
+    @include font-size($font--headline-size);
+    font-weight: $font--headline-weight;
+    padding: $padding;
+    @include transition(all, 0.1s);
+  }
+  .card--body {
+    display: inline-block;
+    height: 80%; // TODO: More reliable way determine height
+    padding: $padding;
+    padding-left: $padding * 1.7;
+    margin-right: .2em; // Margin in place for scrollbar
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    h2 {
+      font-family: $font--family;
+      font-weight: $font--headline-weight;
+      @include font-size(18px);
+      margin-top: 0;
+      margin-bottom: .4em;
+    }
+  }
+  .card--image {
+    display: block;
+    height: 150px;
+    width: $card-size;
+    margin-left: -1.2em;
+    margin-right: -.9em;
+    position: relative;
+    overflow: hidden;
+    @include transition(all, 0.1s);
+    img {
+      @extend %vertical-align;
+      width: 100%;
+    }
+  }
+  .card--bar {
+    background-color: $card--background-color;
+    bottom: 0;
+    padding: $padding;
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    width: $card-width - 1px;
+    @include transition(all, 0.3s);
+  }
+  &.vertical {
+    .card--body {
+      min-height: 90%; // TODO: More reliable way determine height
+      }
+    }
+  &:hover {
+    background: $card--foreground-color;
+    @include box-shadow(0px,0px,5px,$grey-light);
+    @include border(right,$grey-light);
+    @include border(bottom, $grey-light);
+    @include transform-scale(1.05);
+    @include transition(transform,background, .3s);
+    position: relative;
+    z-index: 200;
+    .card--title {
+      background: $grey-header;
+    }
+    .card--bar {
+      background-color: lighten($link-active,15%);
+      @include box-shadow(0px,0px,5px,$grey-light);
+      @include transition(bottom,opacity, .3s);
+      bottom: -46px;
+      color: white;
+      opacity: 1;
+    }
+  }
+}
+
+.double {
+  &.vertical {
+    height: $card-double - 2;
+    // if .right is applied, compensate for overall card-shift of 4px
+    &.right {
+      margin-right: 4px;
+    }
+  }
+  &.horizontal {
+    width: $card-double - 2;
+  }
+}

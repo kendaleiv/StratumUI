@@ -1,7 +1,7 @@
 {
-  "name": "Stratum",
+  "name": "StratumUI",
   "version": "0.0.1",
-  "description": "Another grid system. Stratum; noun. A layer of material, naturally or artificially formed, often one of a number of parallel layers one upon another",
+  "description": "Ritter Insurance Marketing Web App and SPA rapid development grid and UI system.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
     "sass",
     "grid"
   ],
-  "author": "@hougasian",
+  "author": "RIMdev, @hougasian",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hougasian/stratum/issues"
@@ -23,8 +23,6 @@
   "homepage": "https://github.com/hougasian/stratum",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-jshint": "^1.11.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
     "gulp-uglify": "^1.4.0",

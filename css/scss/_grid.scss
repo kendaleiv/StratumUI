@@ -1,3 +1,15 @@
+$columns: 12;
+$gutter: 1em;
+
+%grid-defaults {
+  min-height: 1px;
+  position: relative;
+}
+
+@mixin make-columns($columns: 12, $gutter: null) {
+
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,11 +18,7 @@
 
 div {display: block;}
 
-%grid-defaults {
-  min-height: 1px;
-  position: relative;
-}
-
+// 12 column grid
 .st-col-10,
 .st-col-12,
 .st-col-15,
@@ -26,6 +34,7 @@ div {display: block;}
 .st-col-75 {
   @extend %grid-defaults;
 }
+
 @media (min-width: 992px) {
   .st-col-10 {width: 10%;}
   .st-col-12 {width: 12%;}
@@ -67,19 +76,11 @@ div {display: block;}
   @extend %clearfix;
 }
 
-.st-container,
-.st-container-fluid,
 .st-row {
   &:before, &:after {
     display: table;
     content: " ";
   }
-}
-
-.st-container,
-.st-container-fluid,
-.st-row {
-  &:after {clear: both;}
 }
 
 @media (min-width: 768px){
@@ -97,11 +98,4 @@ div {display: block;}
     float: left;
     margin-left: 0.5em;
   }
-}
-
-.st-row {
-  min-height: 1px;
-  margin: 0;
-  padding: 0;
-  @extend %clearfix;
 }

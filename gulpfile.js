@@ -1,42 +1,27 @@
-// Include gulp
-var gulp = require('gulp');
+/*eslint strict: [2, "global"]*/
+/*global require*/
 
-// Include Our Plugins
-var jshint = require('gulp-jshint');
-var sass   = require('gulp-sass');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
+var gulp = require("gulp"),
+    sass = require("gulp-sass"),
+    debug = require("gulp-debug");
 
-// Lint Task
-gulp.task('lint', function() {
-    return gulp.src('js/*.js')
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'));
-});
+var paths = {
+    sassSource: "css/scss/*.scss",
+    sassDest: "css"
+};
 
-// Compile Our Sass
-gulp.task('sass', function() {
-    return gulp.src('css/scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('css'));
-});
-
-// Concatenate & Minify JS
-gulp.task('scripts', function() {
-    return gulp.src('js/*.js')
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('dist'))
-        .pipe(rename('all.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist'));
+// Compile & minify Sass
+gulp.task("sass", function() {
+  return gulp.src(paths.sassSource)
+    .pipe(sass())
+    .pipe(debug())
+    .pipe(gulp.dest(paths.sassDest));
 });
 
 // Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('js/*.js', ['lint', 'scripts']);
-    gulp.watch('css/scss/*.scss', ['sass']);
+gulp.task("watch", function() {
+  gulp.watch(paths.sassSource, ["sass"]);
 });
 
 // Default Task
-gulp.task('default', ['lint', 'sass', 'scripts', 'watch']);
+gulp.task("default", ["sass", "watch"]);

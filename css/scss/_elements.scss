@@ -11,8 +11,9 @@ html {
 }
 
 body {
-  font-family: $body-font, sans-serif;
-  // font-size: 14px;
+  font-family: $font--body, sans-serif;
+  font-weight: $font--body-weight;
+  line-height: $font--line-height;
 }
 
 // Wrap in our major classes
@@ -23,14 +24,14 @@ body {
   menu { list-style: none; }
 
   section {
-    background-color: $white;
+    background-color: $color-white;
     padding: 1em 0 3em 0;
     }
 
   h1,h2,h3,h4 {
     border: none;
-    color: $black;
-    font-family: $headline-font, sans-serif;
+    color: $grey-dark;
+    font-family: $font--headline, sans-serif;
     font-weight: normal;
     font-style: normal;
     letter-spacing: -0.025em;
@@ -38,15 +39,15 @@ body {
   }
 
   p, li, a, dd, dt, em {
-    font-family: $body-font, sans-serif;
-    color: $black;
+    font-family: $font--body, sans-serif;
+    color: $grey-dark;
     font-size: 14px;
     max-width: 100%;
     line-height: 1.8em;
   }
 
   a {
-    color: $helpblue;
+    color: $link-active;
     text-decoration: none;
     @include transition(all,0.3s);
     &:hover {text-decoration: underline;}
@@ -65,7 +66,7 @@ body {
     margin-left: 0;
     padding-left: 0;
     dt {
-      color: $darkblue;
+      color: $msg--info-text;
       font-weight: bold;
       padding: 0.3em 0;
     }
@@ -77,7 +78,7 @@ body {
   button {
     overflow: visible;
     border: 0;
-    font-family: $body-font, sans-serif;
+    font-family: $font--body, sans-serif;
     -webkit-font-smoothing: inherit;
     letter-spacing: inherit;
     background: none;

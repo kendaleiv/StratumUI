@@ -38,12 +38,13 @@
 
 @mixin alert-box($color) {
   color: darken($color,10%) !important;
-  @if $color == $red {
+  @if $color == $msg--alert-text {
     background: lighten($color,25%);
   } @else {
     background: lighten($color,35%);
   }
-  border: 1px solid $color;
+  @include border(top,$color);
+  @include border(bottom,$color);
 	font-weight: normal !important;
 	margin: 1em;
   padding: 0.5em;
@@ -51,47 +52,55 @@
   width: 100%;
 }
 
-@mixin square($dim) {
-  width: $dim;
-  height: $dim;
+@mixin border($position:null,$color:$border-color) {
+  @if $position != null {
+    border-#{$position}: 1px solid $color;
+  } @else {
+     border: 1px solid $color;
+  }
 }
 
-@mixin bg-size($w, $h: null) {
-  @if $h == null {              // use $w to set background to "cover"
-  -webkit-background-size: $w;
-     -moz-background-size: $w;
-      -ms-background-size: $w;
-       -o-background-size: $w;
-          background-size: $w;
+@mixin square($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bg-size($width, $height: null) {
+  @if $height == null {              // use $width to set background to "cover"
+  -webkit-background-size: $width;
+     -moz-background-size: $width;
+      -ms-background-size: $width;
+       -o-background-size: $width;
+          background-size: $width;
   } @else {
-  -webkit-background-size: $w $h;
-     -moz-background-size: $w $h;
-      -ms-background-size: $w $h;
-       -o-background-size: $w $h;
-          background-size: $w $h;
+  -webkit-background-size: $width $height;
+     -moz-background-size: $width $height;
+      -ms-background-size: $width $height;
+       -o-background-size: $width $height;
+          background-size: $width $height;
   }
 }
 
 @mixin icon($size) {
   display: inline-block;
   @include square($size);
-  @include hidden;
+  @extend %hidden;
   background-repeat: no-repeat;
   background-position: center center;
   @include bg-size(100%, auto);
 }
 
-@mixin border-radius($tl, $tr: null, $br: null, $bl: null) {
-  @if $tr == null {
-    -webkit-border-radius: $tl;
-       -moz-border-radius: $tl;
-         -o-border-radius: $tl;
-            border-radius: $tl;
+@mixin border-radius($top-left, $top-right: null, $bottom-right: null, $bottom-left: null) {
+  @if $top-right == null {
+    -webkit-border-radius: $top-left;
+       -moz-border-radius: $top-left;
+         -o-border-radius: $top-left;
+            border-radius: $top-left;
   } @else {
-    -webkit-border-radius: $tl $tr $br $bl;
-       -moz-border-radius: $tl $tr $br $bl;
-         -o-border-radius: $tl $tr $br $bl;
-            border-radius: $tl $tr $br $bl;
+    -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+       -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+         -o-border-radius: $top-left $top-right $bottom-right $bottom-left;
+            border-radius: $top-left $top-right $bottom-right $bottom-left;
   }
 }
 
@@ -140,9 +149,10 @@
 }
 
 @mixin opacity($decimal,$int) {
-  -khtml-opacity: $decimal;
-    -moz-opacity: $decimal;
-         opacity: $decimal;
+  -webkit-opacity: $decimal;
+     -moz-opacity: $decimal;
+       -o-opacity: $decimal;
+          opacity: $decimal;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$int)";
       filter: alpha(opacity=$int);
 }
@@ -154,10 +164,26 @@
   text-overflow: ellipsis;
 }
 
-@mixin avatar-round($dim, $border-color) {
+@mixin round($width-height, $border-color) {
   @include border-radius(50%);
   border: 2px solid $border-color;
-  width: $dim;
-  height: $dim;
+  width: $width-height;
+  height: $width-height;
   @content;
+}
+
+@mixin transform-scale($x, $y:null){
+  @if $y == null {
+    -webkit-transform: scale($x);
+       -moz-transform: scale($x);
+         -o-transform: scale($x);
+        -ms-transform: scale($x);
+            transform: scale($x);
+  } @else {
+  -webkit-transform: scale($x, $y);
+     -moz-transform: scale($x, $y);
+       -o-transform: scale($x, $y);
+      -ms-transform: scale($x, $y);
+          transform: scale($x, $y);
+  }
 }

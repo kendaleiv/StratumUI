@@ -1,17 +1,10 @@
 // Breakpoints
-// No, we're not going to attempt to please everyone here,
-// but we're giving attention to larger monitors in an attempt
-// to add features based on extra screen realestate.
-$desktop-xl:     2000px;
-$desktop-lg:     1600px;
-$desktop:        1200px;
-$tablet:         991px;
-$tablet-sm:      765px;
-$phone:          480px;
 
-$breakpoint--desktop-xl:     2000px; //card-count 8
-$breakpoint--desktop-large:  1600px; //card-count 6
-$breakpoint--desktop:        1200px; //card-count 4
-$breakpoint--tablet:         991px;  //card-count 3
-$breakpoint--tablet-sm:      765px;  //card-count 2
-$breakpoint--phone:          480px;  //card-count 1
+$breakpoints: (
+  desktop-xl:     2000px,
+  desktop-lg:     1600px,
+  desktop:        1200px,
+  tablet:         991px,
+  phablet:        765px,
+  phone:          480px
+)

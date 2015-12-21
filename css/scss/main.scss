@@ -1,11 +1,14 @@
-/*! Stratum v0.0.1, | MIT License | github.com/hougasian/stratum */
+/* StratumUI v0.0.1, | MIT License | github.com/hougasian/stratum */
 
-// When in doubt, put it in a new file!
+/// When in doubt, put it in a new file!
 
 @charset "utf-8";
 
+// Import any fonts
+@import url("https://fonts.googleapis.com/css?family=Open+sans:400,100,300,600,800)");
+
 // Import Font Awesome here
-@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
 
 // Load normalize
 // https://github.com/necolas/normalize.css/blob/master/normalize.css
@@ -19,11 +22,9 @@
 @import "elements";
 
 // Load components
-@import "
-  breakpoints,
-  typography,
-  grid,
-  cards,
-  messages,
-  helpers
-";
+@import "breakpoints";
+@import "typography";
+@import "grid";
+@import "cards";
+@import "messages";
+@import "helpers";
