@@ -2,6 +2,11 @@
 
 A SASS UI framework for rapid Web, App and SPA development. Developed by Ritter Insurance Marketing Software Development, [RIMdev](http://rimdev.io), under the MIT lisence.
 
+Developed to play nicely with [Font Awesome](https://fortawesome.github.io/Font-Awesome/) :) Just include the following line in the `<head>	` of your document.
+
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+```
 ## Installation
 
 > TODO: Create npm package for Node distribution
