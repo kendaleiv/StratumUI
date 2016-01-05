@@ -1,7 +1,7 @@
 {
-  "name": "RitterUI",
+  "name": "StratumUI",
   "version": "0.0.1",
-  "description": "Ritter Insurance Marketing Web App and SPA rapid development grid and UI system.",
+  "description": "A SASS UI framework for rapid Web, App and SPA development. Developed by Ritter Insurance Marketing Software Development, RIMdev, under the MIT license.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
