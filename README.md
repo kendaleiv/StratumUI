@@ -1,4 +1,4 @@
-# StratumUI
+# RitterUI
 
 A SASS UI framework for rapid Web App and SPA development.
 
