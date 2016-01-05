@@ -1,4 +1,3 @@
-/*eslint strict: [2, "global"]*/
 /*global require*/
 
 var gulp = require("gulp"),

@@ -2,7 +2,8 @@
 
 // Generate card sizes based on containers
 @each $breakpoint in map-values($breakpoints) {
-  $gutter-and-padding: $gutter * 2;
+
+  $gutter-and-padding: $gutter * 2; // Compensate for gutter and padding
   $card-width: ($breakpoint - $gutter-and-padding) / $card-count;
   $card-size: $card-width - 1;  // Compensate for border
   $card-double: $card-width * 2;

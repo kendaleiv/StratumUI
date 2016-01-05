@@ -1,4 +1,4 @@
 .git/
 .DS_Store
 node_modules/
-demos/grid-bs.html
+demos/grid-local.html
