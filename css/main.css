@@ -365,6 +365,14 @@ th {
 .container-fluid:after, .row:after, .group:after {
   clear: both; }
 
+.card:hover--bar .fa {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%; }
+
 .col-12 {
   width: 100%; }
 
@@ -410,18 +418,34 @@ th {
 
 @media (min-width: 480px) {
   .container {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 450px; } }
 
 @media (min-width: 765px) {
   .container {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 735px; } }
 
 @media (min-width: 991px) {
   .container {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 961px; } }
 
 @media (min-width: 1200px) {
   .container {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 1170px; } }
 
 *,
@@ -563,6 +587,23 @@ div {
   text-align: center;
   width: 100%; }
 
+.card ::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+  margin-right: .3em; }
+
+.card ::-webkit-scrollbar-thumb {
+  background: #ccc;
+  background-clip: padding-box;
+  border-radius: .5em; }
+
+.card ::-webkit-scrollbar-track {
+  background: none; }
+
+.card body {
+  scrollbar-face-color: #ccc;
+  scrollbar-track-color: none; }
+
 html, body {
   height: 100%; }
 
@@ -652,6 +693,179 @@ hr {
       width: 50%; }
     hr.hr--quarter {
       width: 25%; }
+
+@media (min-width: 480px) {
+  .card {
+    width: 104px;
+    height: 104px; }
+    .card--image {
+      width: 104px; }
+    .card--bar {
+      width: 104px; }
+    .card.double.horizontal {
+      width: 208px; }
+  .double.vertical {
+    height: 208px; }
+    .double.vertical.right {
+      margin-right: 4px; }
+  .double.horizontal {
+    width: 208px; } }
+
+@media (min-width: 765px) {
+  .card {
+    width: 175.25px;
+    height: 175.25px; }
+    .card--image {
+      width: 175.25px; }
+    .card--bar {
+      width: 175.25px; }
+    .card.double.horizontal {
+      width: 350.5px; }
+  .double.vertical {
+    height: 350.5px; }
+    .double.vertical.right {
+      margin-right: 4px; }
+  .double.horizontal {
+    width: 350.5px; } }
+
+@media (min-width: 991px) {
+  .card {
+    width: 231.75px;
+    height: 231.75px; }
+    .card--image {
+      width: 231.75px; }
+    .card--bar {
+      width: 231.75px; }
+    .card.double.horizontal {
+      width: 463.5px; }
+  .double.vertical {
+    height: 463.5px; }
+    .double.vertical.right {
+      margin-right: 4px; }
+  .double.horizontal {
+    width: 463.5px; } }
+
+@media (min-width: 1200px) {
+  .card {
+    width: 284px;
+    height: 284px; }
+    .card--image {
+      width: 284px; }
+    .card--bar {
+      width: 284px; }
+    .card.double.horizontal {
+      width: 568px; }
+  .double.vertical {
+    height: 568px; }
+    .double.vertical.right {
+      margin-right: 4px; }
+  .double.horizontal {
+    width: 568px; } }
+
+.card {
+  background: #fcfcfc;
+  border-right: 1px solid #e6ecf5;
+  border-bottom: 1px solid #e6ecf5;
+  display: inline-block;
+  float: left;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+  .card--title {
+    font-size: 23.8px;
+    font-size: 1.4875rem;
+    font-weight: 300;
+    padding: 0.7em;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }
+  .card--body {
+    display: inline-block;
+    height: 80%;
+    padding: 0.7em;
+    padding-left: 1.19em;
+    margin-right: .2em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative; }
+    .card--body h2 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      font-size: 1.125rem;
+      margin-top: 0;
+      margin-bottom: .4em; }
+  .card--image {
+    display: block;
+    height: 150px;
+    margin-left: -1.2em;
+    margin-right: -.9em;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out; }
+    .card--image img {
+      width: 100%; }
+  .card--bar {
+    background-color: #fcfcfc;
+    bottom: 0;
+    font-size: 80%;
+    opacity: 0;
+    padding: 0.7em;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 100;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-text-shadow: 0px 1px 1px #0483ff;
+    -moz-text-shadow: 0px 1px 1px #0483ff;
+    -o-text-shadow: 0px 1px 1px #0483ff;
+    text-shadow: 0px 1px 1px #0483ff; }
+  .card.vertical .card--body {
+    min-height: 90%; }
+  .card:hover {
+    background: white;
+    -webkit-box-shadow: 0px 0px 5px #ccc;
+    -moz-box-shadow: 0px 0px 5px #ccc;
+    -o-box-shadow: 0px 0px 5px #ccc;
+    box-shadow: 0px 0px 5px #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: transform background 0.3s;
+    -moz-transition: transform background 0.3s;
+    -o-transition: transform background 0.3s;
+    transition: transform background 0.3s;
+    position: relative;
+    z-index: 200; }
+    .card:hover--title {
+      background: #eee; }
+    .card:hover--bar {
+      background-color: #6ab6ff;
+      -webkit-box-shadow: 0px 0px 5px #ccc;
+      -moz-box-shadow: 0px 0px 5px #ccc;
+      -o-box-shadow: 0px 0px 5px #ccc;
+      box-shadow: 0px 0px 5px #ccc;
+      border-bottom: 1px solid dodgerblue;
+      bottom: -37px;
+      color: white;
+      opacity: 1; }
+      .card:hover--bar .fa {
+        right: 1em;
+        position: absolute; }
+      .card:hover--bar:hover {
+        background-color: dodgerblue;
+        cursor: pointer; }
 
 .left {
   float: left; }

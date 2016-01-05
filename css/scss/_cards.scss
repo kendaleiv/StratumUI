@@ -1,11 +1,44 @@
 // Cards
 $card-count: 4;
-$card-width: $max-width / $card-count;
-$card-size: $card-width - 1;
-$card-double: $card-width * 2;
 
 $card--background-color: $color-white-alt;
 $card--foreground-color: $color-white;
+
+// Generate card sizes based on containers
+@each $breakpoint in map-values($breakpoints) {
+  $gutter-and-padding: $gutter * 2;
+  $card-width: ($breakpoint - $gutter-and-padding) / $card-count;
+  $card-size: $card-width - 1;  // Compensate for border
+  $card-double: $card-width * 2;
+
+  @media (min-width: #{$breakpoint} ) {
+    .card {
+      @include square($card-size);
+      &--image {
+        width: $card-size;
+      }
+      &--bar {
+        width: $card-size;
+      }
+      &.double.horizontal {
+        width: $card-double - 2;
+      }
+    }
+    // Double cards; horizontal or vertical
+    .double {
+      &.vertical {
+        height: $card-double - 2;
+        // if .right is applied, compensate for overall card-shift of 4px
+        &.right {
+          margin-right: 4px;
+        }
+      }
+      &.horizontal {
+        width: $card-double - 2;
+      }
+    }
+  }
+}
 
 .card {
   background: $card--background-color;
@@ -14,7 +47,6 @@ $card--foreground-color: $color-white;
   display: inline-block;
   float: left;
   @extend %scrollbar;
-  @include square($card-size);
   @include transition(all, 0.1s);
   &--title {
     @include font-size($font--headline-size);
@@ -42,7 +74,6 @@ $card--foreground-color: $color-white;
   &--image {
     display: block;
     height: 150px;
-    width: $card-size;
     margin-left: -1.2em;
     margin-right: -.9em;
     position: relative;
@@ -62,7 +93,6 @@ $card--foreground-color: $color-white;
     position: absolute;
     text-transform: uppercase;
     z-index: 100;
-    width: $card-width - 1px;
     @include transition(all, 0.3s);
     @include text-shadow(0px,1px,1px,darken($link-active,5%));
   }
@@ -99,23 +129,6 @@ $card--foreground-color: $color-white;
         background-color: $link-active;
         cursor: pointer;
       }
-      &.double.horizontal {
-        width: $card-double - 2;
-      }
     }
-  }
-}
-
-// Double cards, horizontal or vertical
-.double {
-  &.vertical {
-    height: $card-double - 2;
-    // if .right is applied, compensate for overall card-shift of 4px
-    &.right {
-      margin-right: 4px;
-    }
-  }
-  &.horizontal {
-    width: $card-double - 2;
   }
 }

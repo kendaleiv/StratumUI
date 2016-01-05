@@ -1,11 +1,10 @@
-// Set grid specific vars
-$columns: 12;
-$gutter: 30px;
+/// Grid
 
 // Set grid specific extends
 %grid-defaults {
   min-height: 1px;
   position: relative;
+  @include transition(all, 0.3s);
 }
 
 // Generate columns based on grid size ($columns)
@@ -29,6 +28,7 @@ $gutter: 30px;
 @each $breakpoint in map-values($breakpoints) {
   @media (min-width: #{$breakpoint} ) {
     .container {
+      @include transition(all, 0.3s);
       width: #{$breakpoint - $gutter};
     }
   }
@@ -76,7 +76,7 @@ div {display: block;}
   @extend %clearfix;
 }
 
-// Set width to 100% below breakpoint
+// Set width to 100% below breakpoint; initial values below.
 // phablet:     765px
 // tablet:      991px
 @media (max-width: map-get($breakpoints, tablet)) {

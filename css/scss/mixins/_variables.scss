@@ -50,4 +50,9 @@ $font--headline: $font--family;
 ///
 
 // Padding
-$padding: 0.7em;
+$padding: 0.7em !default;
+
+// Grid
+// Set grid specific vars
+$columns: 12 !default;
+$gutter: 30px !default;
