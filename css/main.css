@@ -373,6 +373,113 @@ th {
   position: relative;
   top: 50%; }
 
+.card ::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+  margin-right: .3em; }
+
+.card ::-webkit-scrollbar-thumb {
+  background: #ccc;
+  background-clip: padding-box;
+  border-radius: .5em; }
+
+.card ::-webkit-scrollbar-track {
+  background: none; }
+
+.card body {
+  scrollbar-face-color: #ccc;
+  scrollbar-track-color: none; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "Open Sans", sans-serif, sans-serif;
+  font-weight: 100;
+  line-height: 1.6em;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: "Open Sans", sans-serif, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 0.5em; }
+
+p,
+li,
+a,
+dd,
+dt,
+em {
+  font-family: "Open Sans", sans-serif, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.8em; }
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  a:hover {
+    text-decoration: underline; }
+
+p a {
+  text-decoration: none; }
+  p a:hover {
+    text-decoration: underline; }
+
+ul, ol {
+  margin-left: 0;
+  padding-left: 1.5em; }
+
+dl {
+  margin-left: 0;
+  padding-left: 0; }
+  dl dt {
+    color: dodgerblue;
+    font-weight: bold;
+    padding: 0.3em 0; }
+  dl dd {
+    margin: 0; }
+
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif, sans-serif;
+  letter-spacing: inherit;
+  -webkit-font-smoothing: inherit; }
+
+small {
+  line-height: 0.1em; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+hr {
+  border: 0;
+  border-top: 1px solid #e6e6e6;
+  margin: 2em auto; }
+  hr.hr {
+    text-align: center; }
+    hr.hr--third {
+      width: 75%; }
+    hr.hr--half {
+      width: 50%; }
+    hr.hr--quarter {
+      width: 25%; }
+
 .col-12 {
   width: 100%; }
 
@@ -586,113 +693,6 @@ div {
   padding: 0.5em;
   text-align: center;
   width: 100%; }
-
-.card ::-webkit-scrollbar {
-  width: 0.4em;
-  height: 0.4em;
-  margin-right: .3em; }
-
-.card ::-webkit-scrollbar-thumb {
-  background: #ccc;
-  background-clip: padding-box;
-  border-radius: .5em; }
-
-.card ::-webkit-scrollbar-track {
-  background: none; }
-
-.card body {
-  scrollbar-face-color: #ccc;
-  scrollbar-track-color: none; }
-
-html, body {
-  height: 100%; }
-
-body {
-  font-family: "Open Sans", sans-serif, sans-serif;
-  font-weight: 100;
-  line-height: 1.6em;
-  font-size: 14px;
-  font-size: 0.875rem; }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #333;
-  font-family: "Open Sans", sans-serif, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  margin-bottom: 0.5em; }
-
-p,
-li,
-a,
-dd,
-dt,
-em {
-  font-family: "Open Sans", sans-serif, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.8em; }
-
-a {
-  color: dodgerblue;
-  text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-  a:hover {
-    text-decoration: underline; }
-
-p a {
-  text-decoration: none; }
-  p a:hover {
-    text-decoration: underline; }
-
-ul, ol {
-  margin-left: 0;
-  padding-left: 1.5em; }
-
-dl {
-  margin-left: 0;
-  padding-left: 0; }
-  dl dt {
-    color: dodgerblue;
-    font-weight: bold;
-    padding: 0.3em 0; }
-  dl dd {
-    margin: 0; }
-
-button {
-  border: 0;
-  background: none;
-  cursor: pointer;
-  font-family: "Open Sans", sans-serif, sans-serif;
-  letter-spacing: inherit;
-  -webkit-font-smoothing: inherit; }
-
-small {
-  line-height: 0.1em; }
-
-img {
-  max-width: 100%;
-  height: auto; }
-
-hr {
-  border: 0;
-  border-top: 1px solid #e6e6e6;
-  margin: 2em auto; }
-  hr.hr {
-    text-align: center; }
-    hr.hr--third {
-      width: 75%; }
-    hr.hr--half {
-      width: 50%; }
-    hr.hr--quarter {
-      width: 25%; }
 
 @media (min-width: 480px) {
   .card {

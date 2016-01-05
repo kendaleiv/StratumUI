@@ -1,9 +1,13 @@
 // Main Mixins manifest
+// Be aware of file order when adding a file
 
 // Main files
 @import "mixins/variables";
 @import "mixins/extends";
 @import "mixins/mixins";
+@import "mixins/breakpoints";
+@import "mixins/scrollbar";
+@import "mixins/typography";
 
 // Mixin files specific to _scss files
 @import "mixins/buttons";
