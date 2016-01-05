@@ -1,4 +1,4 @@
-@mixin ebroker-btn ($background-color,$font-color, $icon, $position : before) {
+@mixin button ($background-color,$font-color, $icon, $position : before) {
   background: $background-color;
   color: $font-color !important;
 	cursor: pointer;
@@ -7,11 +7,11 @@
   padding: 5px 7px;
   vertical-align: bottom;
   @if #{$icon} != null {
-    @include ebroker-icon($position,$icon);
+    @include icon($position,$icon);
   }
 }
 
-@mixin ebroker-icon($position: before, $icon: false, $styles: true, $float:null) {
+@mixin icon($position: before, $icon: false, $styles: true, $float:null) {
   &:#{$position} {
     @if $icon {
       content: "#{map-get($icons, $icon)}";
@@ -186,4 +186,10 @@
       -ms-transform: scale($x, $y);
           transform: scale($x, $y);
   }
+}
+
+@mixin box-sizing($type) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
 }

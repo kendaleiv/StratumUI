@@ -26,12 +26,12 @@ Usage | Examples
 Simply put, if it's a new section, it's a new file. Most files will be partials, beginning with an underscore, then included in the main manifest. Partials will only be compiled when included in a manifest, usually `main.scss`. All non-partials, sass files without the preceding underscore, will be compiled.
 
 ```
-scss
- ├── mixins
-     └── _mixins.scss
- ├── _helpers.scss
- ├── _messages.scss
- ├── main.scss
+scss/
+  | mixins/
+  |  | _mixins.scss
+  |  | _helpers.scss
+  |  | _messages.scss
+  | main.scss
 ```
 
 ### mixins and extends

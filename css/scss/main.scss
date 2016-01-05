@@ -1,6 +1,5 @@
-/* StratumUI v0.0.1, | MIT License | github.com/hougasian/stratum */
-
-/// When in doubt, put it in a new file!
+// Main SASS manifest
+/// --- When in doubt, put it in a new file! --- ///
 
 @charset "utf-8";
 
@@ -17,14 +16,24 @@
 // Load mixins manifest
 @import "mixins";
 
-// Load elements
-// --- Do not load if using on top of another framework. --- //
-@import "elements";
-
 // Load components
 @import "breakpoints";
 @import "typography";
 @import "grid";
-@import "cards";
 @import "messages";
+@import "scrollbar";
+
+// Load elements
+/// --- Do not load if using on top of another CSS framework. --- ///
+@import "elements";
+
+// Load Theme
+// Store all application colors here
+@import "theme";
+
+// Load Cards
+//@import "cards";
+
+// Load Helpers
+/// --- load last; Helpers trump previous declarations --- ///
 @import "helpers";

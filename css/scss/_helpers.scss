@@ -1,4 +1,5 @@
-// General classes
+// Helper classes
+// Helper classes emulate easily recognizable css
 .left {float: left;}
 .right {float: right;}
 .none {float: none;}
@@ -64,23 +65,25 @@
 }
 
 // Button helpers
-.btn-small {
-  font-size: inherit;
-  padding: 7px;
-}
-.btn-medium {
-  font-size: 120%;
-  //padding: 10px 15px;
-}
-.btn-large {
-  font-size: 170%;
-  font-weight: bold;
-  letter-spacing: 1px;
-  padding: 10px;
-}
-.btn-plain {
-  &:hover {
-    text-decoration: none;
+.btn {
+  &--small {
+    font-size: inherit;
+    padding: 7px;
+  }
+  &--medium {
+    font-size: 120%;
+    //padding: 10px 15px;
+  }
+  &--large {
+    font-size: 170%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px;
+  }
+  &--plain {
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 

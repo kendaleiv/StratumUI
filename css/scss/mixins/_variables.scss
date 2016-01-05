@@ -46,17 +46,8 @@ $font--headline: $font--family;
 
 ///
 /// Temp value
-$breakpoint: 1200px;
+/// $breakpoint: 1200px;
 ///
 
 // Padding
 $padding: 0.7em;
-
-// Cards
-$card-count: 4;
-$card-width: $breakpoint / $card-count;
-$card-size: $card-width - 1;
-$card-double: $card-width * 2;
-
-$card--background-color: $color-white-alt;
-$card--foreground-color: $color-white;

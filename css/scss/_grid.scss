@@ -1,101 +1,86 @@
+// Set grid specific vars
 $columns: 12;
-$gutter: 1em;
+$gutter: 30px;
 
+// Set grid specific extends
 %grid-defaults {
   min-height: 1px;
   position: relative;
 }
 
-@mixin make-columns($columns: 12, $gutter: null) {
-
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-div {display: block;}
-
-// 12 column grid
-.st-col-10,
-.st-col-12,
-.st-col-15,
-.st-col-25,
-.st-col-30,
-.st-col-33,
-.st-col-40,
-.st-col-45,
-.st-col-50,
-.st-col-55,
-.st-col-60,
-.st-col-66,
-.st-col-75 {
-  @extend %grid-defaults;
-}
-
-@media (min-width: 992px) {
-  .st-col-10 {width: 10%;}
-  .st-col-12 {width: 12%;}
-  .st-col-15 {width: 15%;}
-  .st-col-25 {width: 25%;}
-  .st-col-30 {width: 30%;}
-  .st-col-33 {width: 33.333333%; width: calc(100% / 3);}
-  .st-col-40 {width: 40%;}
-  .st-col-45 {width: 45%;}
-  .st-col-50 {width: 50%;}
-  .st-col-55 {width: 55%;}
-  .st-col-60 {width: 60%;}
-  .st-col-66 {width: 66.666666%; width: calc(100% * 2/3);}
-  .st-col-75 {width: 75%;}
-  .st-col-100 {width: 100%;}
-}
-@media (min-width: 992px){
-  .st-col-10,
-  .st-col-12,
-  .st-col-15,
-  .st-col-25,
-  .st-col-30,
-  .st-col-33,
-  .st-col-40,
-  .st-col-45,
-  .st-col-50,
-  .st-col-55,
-  .st-col-60,
-  .st-col-66,
-  .st-col-75 {
-    float: left;
+// Generate columns based on grid size ($columns)
+@for $i from $columns through 1 {
+  .col-#{$i} {
+  //width: #{((100 / $columns) * $i - (($columns * ($columns - 1)) / 100))}%;
+  width: #{(100% / $columns) * $i};
   }
 }
 
-.st-container,
-.st-container-fluid {
-  padding: 0 15px;
-  margin: 0 auto;
+// Float all cols left
+[class*='col-'] {
+  position: relative;
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  float: left;
+  overflow: hidden;
+}
+
+// Generate containers
+@each $breakpoint in map-values($breakpoints) {
+  @media (min-width: #{$breakpoint} ) {
+    .container {
+      width: #{$breakpoint - $gutter};
+    }
+  }
+}
+
+// Clear containers
+.container,
+.container-fluid {
+  &:after {
+    @extend %clearfix;
+  }
+}
+
+// Set up gutters
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+// Pad gutters
+[class*='col-'] {
+  padding-right: $gutter / 2;
+  .container &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+// Set block level display
+div {display: block;}
+
+.container,
+.container-fluid {
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  margin-left: auto;
+  margin-right: auto;
   @extend %clearfix;
 }
 
-.st-row {
-  &:before, &:after {
-    display: table;
-    content: " ";
-  }
+// Compensate for container padding to align text
+.row {
+  margin-left: -#{$gutter / 2};
+  margin-right: -#{$gutter / 2};
+  @extend %clearfix;
 }
 
-@media (min-width: 768px){
-  .st-container {width: 750px;}
-}
-@media (min-width: 992px){
-  .st-container {width: 970px;}
-}
-@media (min-width: 1200px){
-  .st-container {width: 1170px;}
-}
-
-@media (max-width: 991px) {
-  .st-small {
-    float: left;
-    margin-left: 0.5em;
+// Set width to 100% below breakpoint
+// phablet:     765px
+// tablet:      991px
+@media (max-width: map-get($breakpoints, tablet)) {
+  [class*='col-'] {
+    width: 100%;
   }
 }
