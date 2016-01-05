@@ -1,0 +1,37 @@
+@mixin button ($background-color,$font-color, $icon, $position : before) {
+  background: $background-color;
+  color: $font-color !important;
+	cursor: pointer;
+  font-family: $body-font;
+  margin: 5px;
+  padding: 5px 7px;
+  vertical-align: bottom;
+  @if #{$icon} != null {
+    @include icon($position,$icon);
+  }
+}
+
+@mixin icon($position: before, $icon: false, $styles: true, $float:null) {
+  &:#{$position} {
+    @if $icon {
+      content: "#{map-get($icons, $icon)}";
+    }
+    @if $styles {
+			font-family: "Fontawesome";
+			font-size: 14px;
+			font-style: normal;
+			line-height: 1em;
+      vertical-align: middle;
+      @if $position == "before" {
+  			padding-right: 10px;
+      } @else {
+        padding-left: 10px;
+      }
+      @if $float != null {
+        float: $float;
+        margin-top: 3%;
+      }
+    }
+    @content;
+  }
+}

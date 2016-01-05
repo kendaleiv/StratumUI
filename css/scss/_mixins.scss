@@ -1,4 +1,9 @@
+// Main Mixins manifest
+
+// Main files
 @import "mixins/variables";
-@import "mixins/rems";
 @import "mixins/extends";
 @import "mixins/mixins";
+
+// Mixin files specific to _scss files
+@import "mixins/buttons";

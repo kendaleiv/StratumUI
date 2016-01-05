@@ -1,8 +1,4 @@
 // Cards
-$card-count: 4;
-
-$card--background-color: $color-white-alt;
-$card--foreground-color: $color-white;
 
 // Generate card sizes based on containers
 @each $breakpoint in map-values($breakpoints) {

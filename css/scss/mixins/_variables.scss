@@ -44,11 +44,6 @@ $font--headline-size: $font--base-size * 1.7;
 $font--body: $font--family;
 $font--headline: $font--family;
 
-///
-/// Temp value
-/// $breakpoint: 1200px;
-///
-
 // Padding
 $padding: 0.7em !default;
 
@@ -56,3 +51,8 @@ $padding: 0.7em !default;
 // Set grid specific vars
 $columns: 12 !default;
 $gutter: 30px !default;
+
+// Cards
+$card-count: 4;
+$card--background-color: $color-white-alt;
+$card--foreground-color: $color-white;
