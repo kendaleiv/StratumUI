@@ -25,9 +25,10 @@
     .double {
       &.vertical {
         height: $card-double - 2;
-        // if .right is applied, compensate for overall card-shift of 4px
+        // if .right is applied, compensate for overall
+        // card-shift of pixels based on card-count
         &.right {
-          margin-right: 4px;
+          margin-right: #{$card-count}px;
         }
       }
       &.horizontal {
@@ -107,21 +108,17 @@
     @include transition(transform,background, .3s);
     position: relative;
     z-index: 200;
-    &--title {
+    .card--title {
       background: $grey-header;
     }
-    &--bar {
+    .card--bar {
       background-color: lighten($link-active,15%);
       @include box-shadow(0px,0px,5px,$grey-light);
       @include border(bottom, $link-active);
       bottom: -37px;
       color: white;
       opacity: 1;
-      .fa {
-        right: 1em;
-        position: absolute;
-        @extend %vertical-center;
-      }
+      text-align: right;
       &:hover {
         background-color: $link-active;
         cursor: pointer;

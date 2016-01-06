@@ -365,14 +365,6 @@ th {
 .container-fluid:after, .row:after, .group:after {
   clear: both; }
 
-.card:hover--bar .fa {
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  position: relative;
-  top: 50%; }
-
 .card ::-webkit-scrollbar {
   width: 0.4em;
   height: 0.4em;
@@ -848,9 +840,9 @@ div {
     transition: transform background 0.3s;
     position: relative;
     z-index: 200; }
-    .card:hover--title {
+    .card:hover .card--title {
       background: #eee; }
-    .card:hover--bar {
+    .card:hover .card--bar {
       background-color: #6ab6ff;
       -webkit-box-shadow: 0px 0px 5px #ccc;
       -moz-box-shadow: 0px 0px 5px #ccc;
@@ -859,11 +851,9 @@ div {
       border-bottom: 1px solid dodgerblue;
       bottom: -37px;
       color: white;
-      opacity: 1; }
-      .card:hover--bar .fa {
-        right: 1em;
-        position: absolute; }
-      .card:hover--bar:hover {
+      opacity: 1;
+      text-align: right; }
+      .card:hover .card--bar:hover {
         background-color: dodgerblue;
         cursor: pointer; }
 

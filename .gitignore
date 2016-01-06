@@ -2,3 +2,4 @@
 .DS_Store
 node_modules/
 demos/grid-local.html
+demos/cards-local.html
