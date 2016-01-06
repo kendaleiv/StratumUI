@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hougasian/stratum"
+    "url": "https://github.com/ritterim/StratumUI"
   },
   "keywords": [
     "scss",
@@ -18,9 +18,9 @@
   "author": "RIMdev, @hougasian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hougasian/stratum/issues"
+    "url": "https://github.com/ritterim/StratumUI"
   },
-  "homepage": "https://github.com/hougasian/stratum",
+  "homepage": "https://github.com/ritterim/StratumUI",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-rename": "^1.2.2",
