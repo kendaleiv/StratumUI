@@ -8,8 +8,6 @@
   float: left;
   @extend %scrollbar;
   @include transition(all, 0.1s);
-  // width: 100%;
-  // min-height: 400px - $gutter;
   &--title {
     @include font-size($font--headline-size);
     font-weight: $font--headline-weight;
