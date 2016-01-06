@@ -1,14 +1,17 @@
 // Cards
+$card-count: 0;
 
 // Generate card sizes based on containers
 @each $breakpoint in map-values($breakpoints) {
 
+  $card-count: $card-count + 1; // Count through card widths as we loop
   $gutter-and-padding: $gutter * 2; // Compensate for gutter and padding
   $card-width: ($breakpoint - $gutter-and-padding) / $card-count;
   $card-size: $card-width - 1;  // Compensate for border
   $card-double: $card-width * 2;
 
   @media (min-width: #{$breakpoint} ) {
+    .card-count {opacity: $card-count;}
     .card {
       @include square($card-size);
       &--image {
@@ -115,6 +118,7 @@
       background-color: lighten($link-active,15%);
       @include box-shadow(0px,0px,5px,$grey-light);
       @include border(bottom, $link-active);
+      @include border(right, lighten($link-active,10%));
       bottom: -37px;
       color: white;
       opacity: 1;
