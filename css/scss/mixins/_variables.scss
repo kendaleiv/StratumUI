@@ -11,7 +11,7 @@ $grey-header:   #eee;
 $color-blue:     lightsteelblue;
 $color-blue-lt:  lighten($color-blue, 15%);
 $color-white:    white;
-$color-white-alt: darken(white,1%);
+$color-white-alt: darken(white,3%);
 
 // Border color
 $border-color: $color-blue-lt;
@@ -53,6 +53,6 @@ $columns: 12 !default;
 $gutter: 30px !default;
 
 // Cards
-$card-count: 4;
+$card-count: 0 !default; 
 $card--background-color: $color-white-alt;
 $card--foreground-color: $color-white;

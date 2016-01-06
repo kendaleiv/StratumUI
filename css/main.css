@@ -686,76 +686,8 @@ div {
   text-align: center;
   width: 100%; }
 
-@media (min-width: 480px) {
-  .card {
-    width: 104px;
-    height: 104px; }
-    .card--image {
-      width: 104px; }
-    .card--bar {
-      width: 104px; }
-    .card.double.horizontal {
-      width: 208px; }
-  .double.vertical {
-    height: 208px; }
-    .double.vertical.right {
-      margin-right: 4px; }
-  .double.horizontal {
-    width: 208px; } }
-
-@media (min-width: 765px) {
-  .card {
-    width: 175.25px;
-    height: 175.25px; }
-    .card--image {
-      width: 175.25px; }
-    .card--bar {
-      width: 175.25px; }
-    .card.double.horizontal {
-      width: 350.5px; }
-  .double.vertical {
-    height: 350.5px; }
-    .double.vertical.right {
-      margin-right: 4px; }
-  .double.horizontal {
-    width: 350.5px; } }
-
-@media (min-width: 991px) {
-  .card {
-    width: 231.75px;
-    height: 231.75px; }
-    .card--image {
-      width: 231.75px; }
-    .card--bar {
-      width: 231.75px; }
-    .card.double.horizontal {
-      width: 463.5px; }
-  .double.vertical {
-    height: 463.5px; }
-    .double.vertical.right {
-      margin-right: 4px; }
-  .double.horizontal {
-    width: 463.5px; } }
-
-@media (min-width: 1200px) {
-  .card {
-    width: 284px;
-    height: 284px; }
-    .card--image {
-      width: 284px; }
-    .card--bar {
-      width: 284px; }
-    .card.double.horizontal {
-      width: 568px; }
-  .double.vertical {
-    height: 568px; }
-    .double.vertical.right {
-      margin-right: 4px; }
-  .double.horizontal {
-    width: 568px; } }
-
 .card {
-  background: #fcfcfc;
+  background: #f7f7f7;
   border-right: 1px solid #e6ecf5;
   border-bottom: 1px solid #e6ecf5;
   display: inline-block;
@@ -803,7 +735,7 @@ div {
     .card--image img {
       width: 100%; }
   .card--bar {
-    background-color: #fcfcfc;
+    background-color: #f7f7f7;
     bottom: 0;
     font-size: 80%;
     opacity: 0;
@@ -849,6 +781,7 @@ div {
       -o-box-shadow: 0px 0px 5px #ccc;
       box-shadow: 0px 0px 5px #ccc;
       border-bottom: 1px solid dodgerblue;
+      border-right: 1px solid #51a9ff;
       bottom: -37px;
       color: white;
       opacity: 1;
@@ -856,6 +789,98 @@ div {
       .card:hover .card--bar:hover {
         background-color: dodgerblue;
         cursor: pointer; }
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    min-height: 450px; }
+    .card--bar {
+      display: none; } }
+
+@media (min-width: 480px) {
+  .card {
+    width: 419px;
+    height: 419px; }
+    .card--image {
+      width: 419px; }
+    .card--bar {
+      width: 419px; }
+    .card.double.horizontal {
+      width: 419px; }
+      .card.double.horizontal .card--bar {
+        width: 419px; }
+  .double.vertical {
+    height: 838px; }
+    .double.vertical.right {
+      margin-right: 1px; }
+  .double.horizontal {
+    width: 838px; } }
+
+@media (min-width: 765px) {
+  .card {
+    width: 351.5px;
+    height: 351.5px; }
+    .card--image {
+      width: 351.5px; }
+    .card--bar {
+      width: 351.5px; }
+    .card.double.horizontal {
+      width: 351.5px; }
+      .card.double.horizontal .card--bar {
+        width: 351.5px; }
+  .double.vertical {
+    height: 703px; }
+    .double.vertical.right {
+      margin-right: 2px; }
+  .double.horizontal {
+    width: 703px; } }
+
+@media (max-width: 991px) {
+  .double.vertical {
+    margin-right: 2px !important; } }
+
+@media (min-width: 991px) {
+  .card {
+    width: 309.33333px;
+    height: 309.33333px; }
+    .card--image {
+      width: 309.33333px; }
+    .card--bar {
+      width: 309.33333px; }
+    .card.double.horizontal {
+      width: 618.66667px; }
+      .card.double.horizontal .card--bar {
+        width: 618.66667px; }
+  .double.vertical {
+    height: 618.66667px; }
+    .double.vertical.right {
+      margin-right: 3px; }
+  .double.horizontal {
+    width: 618.66667px; } }
+
+@media (max-width: 1200px) {
+  .double.vertical {
+    float: right;
+    margin-right: 3px; } }
+
+@media (min-width: 1200px) {
+  .card {
+    width: 284px;
+    height: 284px; }
+    .card--image {
+      width: 284px; }
+    .card--bar {
+      width: 284px; }
+    .card.double.horizontal {
+      width: 568px; }
+      .card.double.horizontal .card--bar {
+        width: 568px; }
+  .double.vertical {
+    height: 568px; }
+    .double.vertical.right {
+      margin-right: 4px; }
+  .double.horizontal {
+    width: 568px; } }
 
 .left {
   float: left; }

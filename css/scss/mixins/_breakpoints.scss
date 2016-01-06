@@ -8,3 +8,9 @@ $breakpoints: (
   tablet:      991px,
   desktop:     1200px
   );
+
+// When we only need to return below a breakpoint
+// Usage: @media (max-width: break-target(phone))
+@function break-target($key) {
+  @return map-get($breakpoints, $key);
+}
