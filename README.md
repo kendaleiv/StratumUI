@@ -128,6 +128,16 @@ Wrap the image tag in a `card--image` container. This will proportionally constr
 </div>
 ```
 
+### Responsive
+
+Cards give you the ability to create double-vertical and double-horizontal cards. Only a uniform card set would collapse easily as you scale down. So what happens? 
+
+Breakpoint | Double-card | Result
+---|---|---
+Desktop | default | default
+Tablet | vertical (left) | floats right
+Phablet | horizontal | single card width
+Phone | all | single width  	
 ## Helper classes
 
 Here's where we turn more to OOCSS. It's just easier to string together these modifiers right in your html. Some are more complex than the example below; for more on helper classes, refer to `_helpers.scss`.
