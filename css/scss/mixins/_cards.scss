@@ -1,0 +1,73 @@
+// Generate card sizes based on containers
+@mixin responsive-cards($card-count) {
+  @each $key, $breakpoint in $breakpoints {
+
+    $card-count: $card-count + 1; // Widen card count as we iterate
+    $card-width: ($breakpoint - $gutter-and-padding) / $card-count;
+    $card-size: $card-width - 1;  // Compensate for border
+    $card-double: $card-width * 2;
+
+    @if $key == "desktop" {
+      @media (max-width: #{$breakpoint}) {
+        .double {
+          &.vertical {
+            float: right;
+            margin-right: #{$card-count - 1}px;
+          }
+        }
+      }
+    }
+    @if $key == "tablet" {
+      @media (max-width: #{$breakpoint}) {
+        .double {
+          &.vertical {
+            margin-right: #{$card-count - 1}px !important;
+          }
+        }
+      }
+    }
+    @if $key == "phone" {
+      @media (max-width: #{$breakpoint}) {
+        .card {
+          width: 100%;
+          min-height: $breakpoint - $gutter;
+          &--bar {display: none;}
+        }
+      }
+    }
+
+    @media (min-width: #{$breakpoint} ) {
+      .card {
+        @include square($card-size);
+        &--image {
+          width: $card-size;
+        }
+        &--bar {
+          width: $card-size;
+        }
+        &.double.horizontal {
+          @if $card-count <= 2 {
+           width: $card-size;
+           .card--bar {width: $card-size;}
+          } @else {
+            width: $card-double - 2;
+            .card--bar {width: $card-double - 2;}
+          }
+        }
+      }
+      // Double cards; horizontal or vertical
+      .double {
+        &.vertical {
+          height: $card-double - 2;
+          &.right {
+            // if .right, compensate for card-shift of pixels (card-count)
+            margin-right: #{$card-count}px;
+          }
+        }
+        &.horizontal {
+          width: $card-double - 2;
+        }
+      }
+    }
+  }
+}

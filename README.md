@@ -9,6 +9,11 @@ Developed to play nicely with [Font Awesome](https://fortawesome.github.io/Font-
 ```
 ## Installation
 
+1. Fork [StratumUI](https://github.com/ritterim/StratumUI)
+2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally 
+2. Run `npm install`
+3. Run `gulp`
+
 > TODO: Create npm package for Node distribution
 
 ## Organization
@@ -138,6 +143,35 @@ Desktop | default | default
 Tablet | vertical (left) | floats right
 Phablet | horizontal | single card width
 Phone | all | single width  	
+
+## Wings
+
+StratumUI has a relatively narrow desktop width (1200px by default). This is because of Wings.
+
+Wings are what happens > the desktop range. Wings are reserved for content only visible on larger screens. Why? Wings are where you can target test features, ad driven content, or just to create a better experience for the space that's usually blank on large screens. **Wings were developed for use with Cards.**
+
+Place wings directly after `.container` and before any `.card`. The right wing must use the `.right` helper class.
+
+```html
+    <div class="container">
+
+      <div class="wing">
+      	 ...
+      </div><!-- /.wing -->
+
+      <div class="wing right">
+      	 ...
+      </div><!-- /.wing -->
+
+      <div class="card">
+      	 ...
+      </div><!-- /.card -->
+       
+		...
+		
+	</div><!-- /.container -->	
+```
+
 ## Helper classes
 
 Here's where we turn more to OOCSS. It's just easier to string together these modifiers right in your html. Some are more complex than the example below; for more on helper classes, refer to `_helpers.scss`.

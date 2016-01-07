@@ -51,8 +51,9 @@ $padding: 0.7em !default;
 // Set grid specific vars
 $columns: 12 !default;
 $gutter: 30px !default;
+$gutter-and-padding: $gutter * 2;
 
 // Cards
-$card-count: 0 !default; 
+$card-count-max: 4;
 $card--background-color: $color-white-alt;
 $card--foreground-color: $color-white;
