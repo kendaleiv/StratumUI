@@ -1,0 +1,30 @@
+// Wings
+// Load after Cards
+
+$wings: break-target(desktop); // breakpoint
+$wings-card: ($wings - $gutter-and-padding) / $card-count-max; // card-width
+$wings-size: $wings-card - 1;
+$wings-max: ($wings - $gutter) + ($wings-size * 2);
+
+.wings {
+  height: 100vh;
+  float: left;
+  max-width: $wings-card;
+  display: inline-block;
+  // Don't show wings below desktop
+  @media (max-width: $wings-max) {display: none;}
+}
+
+// Start wings
+@media
+  (min-width: $wings-max){
+  .container {
+    @include transition(all, 0.3s);
+    width: $wings-max - 1; //
+    .card {
+      &.right {
+        margin-right: #{$card-count-max / 2}px;
+      }
+    }
+  }
+}

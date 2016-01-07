@@ -7,7 +7,10 @@
 @import "mixins/mixins";
 @import "mixins/breakpoints";
 @import "mixins/scrollbar";
-@import "mixins/typography";
+@import "mixins/font-size";
 
 // Mixin files specific to _scss files
 @import "mixins/buttons";
+
+// Mods
+@import "mixins/cards";

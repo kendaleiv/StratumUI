@@ -10,7 +10,6 @@
 // Generate columns based on grid size ($columns)
 @for $i from $columns through 1 {
   .col-#{$i} {
-  //width: #{((100 / $columns) * $i - (($columns * ($columns - 1)) / 100))}%;
   width: #{(100% / $columns) * $i};
   }
 }
@@ -79,7 +78,7 @@ div {display: block;}
 // Set width to 100% below breakpoint; initial values below.
 // phablet:     765px
 // tablet:      991px
-@media (max-width: map-get($breakpoints, tablet)) {
+@media (max-width: break-target(tablet)) {
   [class*='col-'] {
     width: 100%;
   }
