@@ -1,8 +1,7 @@
 /*global require*/
 
 var gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    debug = require("gulp-debug");
+    sass = require("gulp-sass");
 
 var paths = {
     sassSource: "css/scss/*.scss",
@@ -13,7 +12,6 @@ var paths = {
 gulp.task("sass", function() {
   return gulp.src(paths.sassSource)
     .pipe(sass())
-    .pipe(debug())
     .pipe(gulp.dest(paths.sassDest));
 });
 

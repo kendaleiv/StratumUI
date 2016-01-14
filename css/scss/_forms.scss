@@ -1,0 +1,29 @@
+/// Forms
+
+input {
+  border: none;
+  border-bottom: 1px solid $grey-light;
+  margin: $padding 0;
+  padding: $padding;
+}
+
+
+// Modifiers that only exist within <form>
+form {
+  input,
+  select {
+    //width: 100%;
+  }
+}
+
+.form-group {
+  width: 100%;
+  input {
+    display: inline-block;
+    margin-right: $padding * 2;
+    width: auto;
+    &:last-of-type {
+      margin-right: none;
+    }
+  }
+}
