@@ -16,3 +16,4 @@ Thumbs.db
 
 # Package managers
 node_modules/
+npm-debug.log
