@@ -1,5 +1,19 @@
+# git and Jekyll
 .git/
+docs/.jekyll-metadata
+_gh_pages
+_site
+
+* OS and editors
 .DS_Store
+.cache
+.sass-cache
+.project
+.settings
+*.sublime-project
+*.sublime-workspace
+Thumbs.db
+
+# Package managers
 node_modules/
-demos/grid-local.html
-demos/cards-local.html
+npm-debug.log

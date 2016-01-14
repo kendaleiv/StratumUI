@@ -1,19 +1,22 @@
 {
-  "name": "StratumUI",
-  "version": "0.0.1",
-  "description": "A SASS UI framework for rapid Web, App and SPA development. Developed by Ritter Insurance Marketing Software Development, RIMdev, under the MIT license.",
+  "name": "stratumui",
+  "version": "0.0.2",
+  "description": "[WIP] A SASS UI framework for rapid Web, App and SPA development. No relation to stratum-framework.",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ritterim/StratumUI"
+    "url": "git+https://github.com/ritterim/StratumUI.git"
   },
   "keywords": [
     "scss",
     "sass",
-    "grid"
+    "grid",
+    "framework",
+    "front-end",
+    "responsive"
   ],
   "author": "RIMdev, @hougasian",
   "license": "MIT",
@@ -26,5 +29,10 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",
     "gulp-uglify": "^1.4.0"
-  }
+  },
+  "files": [
+    "css",
+    "demos",
+    "gulpfile.js"
+  ]
 }

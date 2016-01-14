@@ -389,8 +389,8 @@ body {
   font-family: "Open Sans", sans-serif, sans-serif;
   font-weight: 100;
   line-height: 1.6em;
-  font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 16px;
+  font-size: 1rem; }
 
 h1,
 h2,
@@ -411,8 +411,8 @@ dd,
 dt,
 em {
   font-family: "Open Sans", sans-serif, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.8em; }
 
 a {
@@ -686,6 +686,19 @@ div {
   text-align: center;
   width: 100%; }
 
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin: 0.7em 0;
+  padding: 0.7em; }
+
+.form-group input {
+  display: inline-block;
+  margin-right: 1.4em;
+  width: auto; }
+  .form-group input:last-of-type {
+    margin-right: none; }
+
 @media (max-width: 480px) {
   .card {
     width: 100%;
@@ -789,8 +802,8 @@ div {
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out; }
   .card--title {
-    font-size: 23.8px;
-    font-size: 1.4875rem;
+    font-size: 27.2px;
+    font-size: 1.7rem;
     font-weight: 300;
     padding: 0.7em;
     -webkit-transition: all 0.1s ease-in-out;
