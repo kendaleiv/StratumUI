@@ -7,15 +7,6 @@ input {
   padding: $padding;
 }
 
-
-// Modifiers that only exist within <form>
-form {
-  input,
-  select {
-    //width: 100%;
-  }
-}
-
 .form-group {
   width: 100%;
   input {
