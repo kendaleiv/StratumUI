@@ -4,7 +4,7 @@ docs/.jekyll-metadata
 _gh_pages
 _site
 
-* OS and editors
+# OS and editors
 .DS_Store
 .cache
 .sass-cache

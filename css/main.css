@@ -692,12 +692,14 @@ input {
   margin: 0.7em 0;
   padding: 0.7em; }
 
-.form-group input {
-  display: inline-block;
-  margin-right: 1.4em;
-  width: auto; }
-  .form-group input:last-of-type {
-    margin-right: none; }
+.form-group {
+  width: 100%; }
+  .form-group input {
+    display: inline-block;
+    margin-right: 1.4em;
+    width: auto; }
+    .form-group input:last-of-type {
+      margin-right: none; }
 
 @media (max-width: 480px) {
   .card {
@@ -913,6 +915,40 @@ input {
     width: 1737px; }
     .container .card.right {
       margin-right: 2px; } }
+
+table {
+  width: 100%;
+  line-height: 1,5em;
+  margin-bottom: 2em; }
+  table table, table th, table td {
+    border-bottom: 1px solid #ccc;
+    border-collapse: collapse; }
+  table th, table td {
+    padding: 0.3em; }
+  table.inner-borders table, table.inner-borders td {
+    border-right: 1px solid #ccc;
+    padding-left: 0.5em; }
+    table.inner-borders table:first-of-type, table.inner-borders td:first-of-type {
+      padding-left: 0.3em; }
+    table.inner-borders table:last-of-type, table.inner-borders td:last-of-type {
+      border-right: none; }
+  table.text-top table, table.text-top th, table.text-top td {
+    vertical-align: text-top; }
+  table.even tr:nth-child(even) {
+    background: #efefef; }
+  table.odd tr:nth-child(odd) {
+    background: #efefef; }
+
+code {
+  background: #efefef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  color: inherit;
+  font-family: monospace;
+  font-size: 100%;
+  padding: 0.3em; }
 
 .left {
   float: left; }
