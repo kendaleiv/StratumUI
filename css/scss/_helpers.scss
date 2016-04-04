@@ -6,13 +6,35 @@
 
 .inline {display: inline-block;}
 
-.text-left {text-align: left;}
-.text-right {text-align: right;}
-.text-center {text-align: center;}
-
 .no-border {border: none;}
 .no-margin {margin: 0;}
 .no-padding {padding: 0;}
+
+// margins (top-bottom)
+.margin-tb {
+  &-20 {margin: 20px auto;}
+  &-1 {margin: 1em auto;}
+  &-2 {margin: 2em auto;}
+  &-3 {margin: 3em auto;}
+}
+
+// padding
+.pad {
+  &-5 {padding: 5px;}
+  &-10 {padding: 10px;}
+  &-20 {padding: 20px;}
+  &-1 {padding: 1em;}
+  &-2 {padding: 2em;}
+  &-3 {padding: 3em;}
+}
+
+// border
+.border {
+  &--left {@include border("left");}
+  &--right {@include border("right");}
+  &--bottom {@include border("bottom");}
+  &--top {@include border("top");}
+}
 
 .fixed {position: fixed;}
 
@@ -27,20 +49,6 @@
   vertical-align: bottom;
 }
 
-// padding
-.pad-5 {padding: 5px;}
-.pad-10 {padding: 10px;}
-.pad-20 {padding: 20px;}
-.pad-1 {padding: 1em;}
-.pad-2 {padding: 2em;}
-.pad-3 {padding: 3em;}
-
-// margin
-.margin-tb-20 {margin: 20px auto;}
-.margin-tb-1 {margin: 1em auto;}
-.margin-tb-2 {margin: 2em auto;}
-.margin-tb-3 {margin: 3em auto;}
-
 // Generic box
 // Normalize h* tags for generic message boxes
 .generic-box {
@@ -49,30 +57,6 @@
     margin-bottom: 0.5em;
   }
 }
-
-// badge
-// use with numbers
-span {
-  &.badge {
-    background: $msg--info-text;
-    color: $color-white;
-    display: inline-block;
-    font-size: 75%;
-    font-weight: 300;
-    text-align: center;
-    @include square($font--base-size * 1.6);
-    @include border-radius(50%);
-    &--alert {
-      @extend .badge;
-      background: $msg--alert-text;
-    }
-    &--success {
-      @extend .badge;
-      background: $msg--success-text;
-    }
-  }
-}
-
 
 // Display across views
 .display-block {display: block;}

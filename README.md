@@ -184,10 +184,13 @@ Card content elements are `--title`, `--body` and `--bar`. Long content will scr
 
 > Using a double-width Card? Don't forget to add `double` class: `card--bar double`
 
+> If the Card needs an _Add_ action, use `<button class="add right">&#43;</button>`
+
 ```html
   <div class="card">
     <div class="card--title">
       Headline
+      <button class="add right">&#43;</button>
     </div>
     <div class="card--body">
       Content.
@@ -257,5 +260,5 @@ Place wings directly after `.container` and before any `.card`. The right wing m
 Here's where we turn more to OOCSS. It's just easier to string together these modifiers right in your html. Some are more complex than the example below; for more on helper classes, refer to `_helpers.scss`.
 
 ```html
-<h1 class="text-center no-padding right">
+<h1 class="text--center no-padding right">
 ```
