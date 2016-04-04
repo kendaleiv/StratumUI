@@ -41,21 +41,7 @@
 .margin-tb-2 {margin: 2em auto;}
 .margin-tb-3 {margin: 3em auto;}
 
-.list-inline {
-  li {
-    display: inline-block;
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 0.5em;
-  }
-}
-
-.list-style-none {
-  list-style: none;
-}
-
-// Geniric box
+// Generic box
 // Normalize h* tags for generic message boxes
 .generic-box {
   h2, h3 {
@@ -64,51 +50,31 @@
   }
 }
 
-// Button helpers
-.btn {
-  &--small {
-    font-size: inherit;
-    padding: 7px;
-  }
-  &--medium {
-    font-size: 120%;
-    //padding: 10px 15px;
-  }
-  &--large {
-    font-size: 170%;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 10px;
-  }
-  &--plain {
-    &:hover {
-      text-decoration: none;
+// badge
+// use with numbers
+span {
+  &.badge {
+    background: $msg--info-text;
+    color: $color-white;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 300;
+    text-align: center;
+    @include square($font--base-size * 1.6);
+    @include border-radius(50%);
+    &--alert {
+      @extend .badge;
+      background: $msg--alert-text;
+    }
+    &--success {
+      @extend .badge;
+      background: $msg--success-text;
     }
   }
 }
 
-// inputs and selects
-.input-large {
-  font-size: 120%;
-  padding: 0.5em;
-}
-.input-xlarge {
-  font-size: 170%;
-  padding: 0.7em;
-}
-
-.select-small {
-  height: 40px;
-  line-height: normal;
-}
-.select-xlarge {
-  font-size: 170%;
-  line-height: normal;
-  padding: 0.7em;
-}
 
 // Display across views
-
 .display-block {display: block;}
 
 // Do not show on desktop and HD

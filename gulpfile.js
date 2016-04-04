@@ -2,6 +2,7 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     webserver = require('gulp-webserver'),
     opn = require('opn');
 
@@ -12,13 +13,16 @@ var paths = {
 
 var server = {
   host: 'localhost',
-  port: '6001'
+  port: '6001',
+  baseurl: '/demos/'
 }
 
-// Compile & minify Sass
+// Sass & PostCSS autoprefixer
 gulp.task('sass', function() {
-  return gulp.src(paths.sassSource)
+  gulp.src(paths.sassSource)
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.sassDest));
 });
 
@@ -35,7 +39,7 @@ gulp.task('webserver', function() {
 
 // open it
 gulp.task('openbrowser', function() {
-  opn( 'http://' + server.host + ':' + server.port + '/demos/');
+  opn('http://' + server.host + ':' + server.port + server.baseurl);
 });
 
 // Watch Files For Changes

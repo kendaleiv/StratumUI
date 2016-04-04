@@ -1,0 +1,30 @@
+ul,
+ol {
+  &.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+  }
+  &.bordered {
+    li {
+      display: block;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+      @include border("bottom");
+      &:last-of-type {
+        border: none;
+      }
+    }
+  }
+  &.list-inline {
+    li {
+      display: inline-block;
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: 0.5em;
+    }
+  }
+  &.list-style-none {
+    list-style: none;
+  }
+}
