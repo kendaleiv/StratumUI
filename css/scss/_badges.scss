@@ -1,0 +1,57 @@
+// badge
+// use with numbers
+span {
+  &.badge {
+    background: $msg--info-text;
+    color: $color-white;
+    display: inline-block;
+    font-size: 75%;
+    font-weight: 300;
+    text-align: center;
+    @include square($font--base-size * 1.6);
+    @include border-radius(50%);
+    &--alert {
+      @extend .badge;
+      background: $msg--alert-text;
+    }
+    &--success {
+      @extend .badge;
+      background: $msg--success-text;
+    }
+  }
+}
+
+// Status markers
+.status {
+  display: inline-block;
+  @include border-radius(50%);
+  @include square(.5em);
+  &--success {
+    @extend .status;
+    background: $msg--success-text;
+  }
+  &--alert {
+    @extend .status;
+    background: $msg--alert-text;
+  }
+  &--info {
+    @extend .status;
+    background: $msg--info-text;
+  }
+  &--warn {
+    @extend .status;
+    background: $msg--warning-text;
+  }
+  &--grey {
+    @extend .status;
+    background: $grey;
+  }
+  &--muted {
+    @extend .status;
+    background: $grey-light;
+  }
+  &--system {
+    @extend .status;
+    background: $msg--system-text;
+  }
+}

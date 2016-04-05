@@ -1,0 +1,28 @@
+
+// Alignment
+.text {
+  &--left {text-align: left;}
+  &--right {text-align: right;}
+  &--center {text-align: center;}
+}
+
+// Sizing
+.text {
+  &--tiny {font-size: 50%;}
+  &--small {font-size: 75%;}
+  &--large {font-size: 125%;}
+  &--display {font-size: 150%;}
+  &--display-lg {font-size: 175%;}
+  &--display-xlg {font-size: 200%;}
+}
+
+// Color
+.text {
+  &--success {color: $msg--success-text;}
+  &--alert {color: $msg--alert-text;}
+  &--info {color: $msg--info-text;}
+  &--warn {color: $msg--warning-text;}
+  &--grey {color: $grey;}
+  &--muted {color: $grey-light;}
+  &--system {color: $msg--system-text;}
+}
