@@ -16,6 +16,10 @@
     font-weight: $font--headline-weight;
     padding: $padding;
     @include transition(all, 0.1s);
+    .add {
+      display: none;
+      @include transition(all,.3s);
+    }
   }
   &--body {
     display: inline-block;
@@ -75,6 +79,7 @@
     z-index: 200;
     .card--title {
       background: $grey-header;
+      .add {display: inline-block;}
     }
     .card--bar {
       background-color: lighten($link-active,15%);

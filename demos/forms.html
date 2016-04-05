@@ -19,32 +19,25 @@
 
       <div class="container">
 
-        <h1>Forms Demo</h1>
-        <p></p>
+        <h1>Forms</h1>
 
-        <h2 class="text-center">Columns</h2>
+        <h2 class="text--center">Input</h2>
 
         <div class="row">
 
         <form>
           <h3 class="info"><strong>input:</strong> text</h3>
-          <input type="text" name="name" value="Name">
 
-          <div class="form-group">
-            <input type="text" name="firstname" value="First Name">
-            <input type="text" name="lastname" value="Last Name">
+          <div class="form-fluid">
+            <input type="text" name="firstname" placeholder="First Name">
+            <input type="text" name="lastname" placeholder="Last Name">
           </div><!-- /.form-group -->
 
+          <input type="text" name="firstname" placeholder="First Name" required="required">
+          <input type="text" name="lastname" placeholder="Last Name">
+
+          <input type="submit" name="validate" value="validate">
         </form>
-
-
-          <form>
-            <h3 class="info">input: text</h3>
-            First name:<br>
-            <input type="text" name="firstname" placeholder="First Name"><br>
-            Last name:<br>
-            <input type="text" name="lastname" placeholder="Last Name">
-          </form>
 
           <form>
             <input type="range" name="points" min="0" max="10">
@@ -69,7 +62,7 @@
 
           <form>
             Select a time:
-            <input type="time" name="usr_time">
+            <input type="time" name="time">
           </form>
 
           <form>
@@ -79,11 +72,10 @@
 
           <form>
             Telephone:
-            <input type="tel" name="usrtel">
+            <input type="tel" name="telephone">
           </form>
 
 
-          <input type="password" name="name" value="">
           <input type="submit" name="name" value="">
 
           <form>

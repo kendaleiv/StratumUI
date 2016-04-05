@@ -1,6 +1,6 @@
 {
   "name": "stratumui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "[WIP] A SASS UI framework for rapid Web, App and SPA development. No relation to stratum-framework.",
   "main": "index.html",
   "scripts": {
@@ -26,9 +26,11 @@
   "homepage": "https://github.com/ritterim/StratumUI",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.0",
-    "gulp-uglify": "^1.4.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-webserver": "^0.9.1",
+    "opn": "^4.0.1"
   },
   "files": [
     "css",

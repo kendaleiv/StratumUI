@@ -6,13 +6,35 @@
 
 .inline {display: inline-block;}
 
-.text-left {text-align: left;}
-.text-right {text-align: right;}
-.text-center {text-align: center;}
-
 .no-border {border: none;}
 .no-margin {margin: 0;}
 .no-padding {padding: 0;}
+
+// margins (top-bottom)
+.margin-tb {
+  &-20 {margin: 20px auto;}
+  &-1 {margin: 1em auto;}
+  &-2 {margin: 2em auto;}
+  &-3 {margin: 3em auto;}
+}
+
+// padding
+.pad {
+  &-5 {padding: 5px;}
+  &-10 {padding: 10px;}
+  &-20 {padding: 20px;}
+  &-1 {padding: 1em;}
+  &-2 {padding: 2em;}
+  &-3 {padding: 3em;}
+}
+
+// border
+.border {
+  &--left {@include border("left");}
+  &--right {@include border("right");}
+  &--bottom {@include border("bottom");}
+  &--top {@include border("top");}
+}
 
 .fixed {position: fixed;}
 
@@ -27,35 +49,7 @@
   vertical-align: bottom;
 }
 
-// padding
-.pad-5 {padding: 5px;}
-.pad-10 {padding: 10px;}
-.pad-20 {padding: 20px;}
-.pad-1 {padding: 1em;}
-.pad-2 {padding: 2em;}
-.pad-3 {padding: 3em;}
-
-// margin
-.margin-tb-20 {margin: 20px auto;}
-.margin-tb-1 {margin: 1em auto;}
-.margin-tb-2 {margin: 2em auto;}
-.margin-tb-3 {margin: 3em auto;}
-
-.list-inline {
-  li {
-    display: inline-block;
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 0.5em;
-  }
-}
-
-.list-style-none {
-  list-style: none;
-}
-
-// Geniric box
+// Generic box
 // Normalize h* tags for generic message boxes
 .generic-box {
   h2, h3 {
@@ -64,51 +58,7 @@
   }
 }
 
-// Button helpers
-.btn {
-  &--small {
-    font-size: inherit;
-    padding: 7px;
-  }
-  &--medium {
-    font-size: 120%;
-    //padding: 10px 15px;
-  }
-  &--large {
-    font-size: 170%;
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding: 10px;
-  }
-  &--plain {
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
-
-// inputs and selects
-.input-large {
-  font-size: 120%;
-  padding: 0.5em;
-}
-.input-xlarge {
-  font-size: 170%;
-  padding: 0.7em;
-}
-
-.select-small {
-  height: 40px;
-  line-height: normal;
-}
-.select-xlarge {
-  font-size: 170%;
-  line-height: normal;
-  padding: 0.7em;
-}
-
 // Display across views
-
 .display-block {display: block;}
 
 // Do not show on desktop and HD

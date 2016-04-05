@@ -12,7 +12,7 @@ Developed to play nicely with [Font Awesome](https://fortawesome.github.io/Font-
 ## Installation
 
 1. Fork [StratumUI](https://github.com/ritterim/StratumUI)
-2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally 
+2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally
 2. Run `npm install`
 3. Run `gulp`
 
@@ -54,7 +54,7 @@ scss/
 
 ### Mixins and extends
 
-Mixins are separated into a mixins folder and called via the mixins manifest. 
+Mixins are separated into a mixins folder and called via the mixins manifest.
 
 Mixins specific to a partial are placed in a mixin partial of the same name. A mixin used to create a button would live in `mixins/_buttons.scss`, all cooresponding styles will be in `_buttons.scss`.
 
@@ -62,7 +62,7 @@ Mixins specific to a partial are placed in a mixin partial of the same name. A m
 
 ## Grid
 
-The default grid is 12 columns (which you can change in `mixins/_variables.scss`). Column widths are generated based on `.container` width. 
+The default grid is 12 columns (which you can change in `mixins/_variables.scss`). Column widths are generated based on `.container` width.
 
 Container widths are generated based on pre-defined breakpoints (`mixins/_breakpoints.scss`). The default tablet breakpoint triggers 100% column widths for mobile.
 
@@ -71,11 +71,89 @@ Container widths are generated based on pre-defined breakpoints (`mixins/_breakp
 $breakpoints: (
   phone:       480px,
   phablet:     765px,
-  tablet:      991px,
   desktop:     1200px
   );
 
 ```
+
+## Layout
+
+### Columns
+
+Column structure is similar to bootstrap; the main reasoning is to easily transition a team using BS into this lighter SASS framework.
+
+#### Usage
+
+```html
+<!--  3 column layout -->
+<div class="row">
+  <div class="col-4">
+    <h2>H2</h2>
+    <p> Content. </p>
+  </div>
+  <div class="col-4">
+    <h2>H2</h2>
+    <p> Content. </p>
+  </div>
+  <div class="col-4">
+    <h2>H2</h2>
+    <p> Content. </p>
+  </div>
+</div>
+
+<!--  4 column layout -->
+<div class="row">
+  <div class="col-3">
+    <h3>H3</h3>
+    <p> Content. </p>
+  </div>
+  <div class="col-3">
+    <h3>H3</h3>
+    <p> Content. </p>
+  </div>
+  <div class="col-3">
+    <h3>H3</h3>
+    <p> Content. </p>
+  </div>
+  <div class="col-3">
+    <h3>H3</h3>
+    <p> Content. </p>
+  </div>
+</div>
+```
+
+### Tables
+
+Tables are straight-forward, and have several helper classes to modify their look, layout, and readability. See [demos/tables](/demos/tables.html) for live examples.
+
+#### Usage
+
+```html
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Bio</th>
+  </tr>
+  <tr>
+    <td>Hank</td>
+    <td>Venture</td>
+    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+  </tr>
+  <tr>
+    <td>Dean</td>
+    <td>Venture</td>
+    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+  </tr>
+</table>
+```
+
+Type | Usage | Behaviour
+---|---|---
+inner borders | `table class="inner-borders"` |
+even | `table class="even"` | background color on all even rows
+odd | `table class="odd"` | background color on all odd rows
+text-top | `table class="text-top"`| vertical-align all text to top of cell
 
 ## Cards
 
@@ -106,10 +184,13 @@ Card content elements are `--title`, `--body` and `--bar`. Long content will scr
 
 > Using a double-width Card? Don't forget to add `double` class: `card--bar double`
 
+> If the Card needs an _Add_ action, use `<button class="add right">&#43;</button>`
+
 ```html
   <div class="card">
     <div class="card--title">
       Headline
+      <button class="add right">&#43;</button>
     </div>
     <div class="card--body">
       Content.
@@ -137,7 +218,7 @@ Wrap the image tag in a `card--image` container. This will proportionally constr
 
 ### Responsive
 
-Cards give you the ability to create double-vertical and double-horizontal cards. Only a uniform card set would collapse easily as you scale down. So what happens? 
+Cards give you the ability to create double-vertical and double-horizontal cards. Only a uniform card set would collapse easily as you scale down. So what happens?
 
 Breakpoint | Double-card | Result
 ---|---|---
@@ -168,10 +249,10 @@ Place wings directly after `.container` and before any `.card`. The right wing m
       <div class="card">
       	 ...
       </div><!-- /.card -->
-       
+
 		...
-		
-	</div><!-- /.container -->	
+
+	</div><!-- /.container -->
 ```
 
 ## Helper classes
@@ -179,6 +260,5 @@ Place wings directly after `.container` and before any `.card`. The right wing m
 Here's where we turn more to OOCSS. It's just easier to string together these modifiers right in your html. Some are more complex than the example below; for more on helper classes, refer to `_helpers.scss`.
 
 ```html
-<h1 class="text-center no-padding right">
+<h1 class="text--center no-padding right">
 ```
-
