@@ -1,5 +1,6 @@
 // badge
 // use with numbers
+// TODO: fluid width for badges
 span {
   &.badge {
     background: $msg--info-text;
@@ -8,7 +9,8 @@ span {
     font-size: 75%;
     font-weight: 300;
     text-align: center;
-    @include square($font--base-size * 1.6);
+    line-height: 1.5em;
+    @include square($font--base-size * 1.2);
     @include border-radius(50%);
     &--alert {
       @extend .badge;

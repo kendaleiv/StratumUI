@@ -7,8 +7,7 @@ ol {
   &.bordered {
     li {
       display: block;
-      margin-bottom: 1em;
-      padding-bottom: 1em;
+      padding: 1em 0;
       @include border("bottom");
       &:last-of-type {
         border: none;
@@ -18,7 +17,6 @@ ol {
   &.list-inline {
     li {
       display: inline-block;
-      float: left;
       list-style: none;
       margin: 0;
       padding: 0.5em;
@@ -26,5 +24,18 @@ ol {
   }
   &.list-style-none {
     list-style: none;
+  }
+}
+
+// no-padding applied to card--body,
+// bring b
+.card--body {
+  &.no-padding {
+    .bordered {
+      li {
+        padding-left: 1em;
+        padding-right: 1em;
+      }
+    }
   }
 }

@@ -2,17 +2,24 @@
 
 input {
   border: none;
-  border-bottom: 1px solid $grey-light;
+  @include border("bottom", $grey-light);
+  background: transparent;
   margin: $padding 0;
   padding: $padding;
   &[type="submit"] {
-    background: $msg--info-text;
-    color: $color-white;
+    @extend .btn;
   }
 }
 
-
 .btn {
+  outline: none;
+  background-color: lighten($link-active,15%);
+  color: $color-white;
+  @include border("bottom", $link-active);
+  @include transition(all,.3s);
+  &:hover {
+    background-color: $link-active;
+  }
   &--small {
     font-size: inherit;
     padding: 7px;
@@ -79,7 +86,7 @@ input {
   outline: none;
   outline-color: transparent;
   &:focus {
-    border-bottom: 1px solid lighten($msg--info-text,30%);
+    @include border("bottom", lighten($msg--info-text,30%));
     // html5 validation trigger
     &:invalid {outline: $msg--alert-text solid thick;}
   }
@@ -109,9 +116,6 @@ input[type=range] {
     color: transparent;
   }
 }
-
-
-
 
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
