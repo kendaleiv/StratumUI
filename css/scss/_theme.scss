@@ -1,1 +1,29 @@
-//body {background: powderblue;}
+// Theme vars
+$color-nav: cornsilk;
+
+// Theme
+header {
+  background: $grey-dark;
+  color: $color-nav;
+  font-weight: 100;
+  display: block;
+  padding: 0 1em;
+  h2 {
+    color: $color-nav;
+    font-weight: lighter;
+  }
+  ul {
+    margin: 0;
+    li {
+      min-width: 4.5em;
+      text-align: center;
+      a {
+        color: $color-nav;
+        text-decoration: none;
+      }
+    }
+  }
+  .fa + span {
+    margin-left: -0.4em;
+  }
+}

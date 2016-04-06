@@ -62,10 +62,10 @@
 .display-block {display: block;}
 
 // Do not show on desktop and HD
-@media (max-width: 1200px){
+@media (min-width: 1200px){
   .not-desktop {display: none;}
 }
-@media (min-width: 1200px){
+@media (max-width: 1200px){
   .only-desktop {display: none;}
 }
 
