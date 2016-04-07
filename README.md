@@ -7,14 +7,16 @@ Developed to play nicely with [Font Awesome](https://fortawesome.github.io/Font-
 ```html
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 ```
-## Installation
 
-1. Fork [StratumUI](https://github.com/ritterim/StratumUI)
-2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally
-2. Run `npm install`
-3. Run `gulp`
+## Installation / Usage
 
-> TODO: Create npm package for Node distribution
+We recommend installing the [stratumui](https://www.npmjs.com/package/stratumui) npm package.
+
+```
+npm install stratumui --save
+```
+
+After installation, you can use the CSS file directly at `node_modules/stratumui/css/main.css`.
 
 ## Organization
 
@@ -30,7 +32,6 @@ Usage | Examples
 `[block]-[modifier]` | `$grey-dark`
 `[block]--[element]` | `.card--title` `$font--family`
 `[block]--[element]-[modifier]` | `$font--headline-weight`
-
 
 ### File Structure
 
@@ -163,7 +164,7 @@ Card dimensions are based on the breakpoint of their container. Four (4) cards a
 
 ```html
   <div class="card">
-  	...
+      ...
   </div>
 ```
 
@@ -209,7 +210,7 @@ Wrap the image tag in a `card--image` container. This will proportionally constr
 ```html
 <div class="card--body">
   <div class="card--image">
-  	<img src="/path/to/image">
+    <img src="/path/to/image">
   </div>
 </div>
 ```
@@ -237,20 +238,20 @@ Place wings directly after `.container` and before any `.card`. The right wing m
     <div class="container">
 
       <div class="wing">
-      	 ...
+        ...
       </div><!-- /.wing -->
 
       <div class="wing right">
-      	 ...
+        ...
       </div><!-- /.wing -->
 
       <div class="card">
-      	 ...
+        ...
       </div><!-- /.card -->
 
-		...
+      ...
 
-	</div><!-- /.container -->
+    </div><!-- /.container -->
 ```
 
 ## Helper classes
@@ -260,3 +261,10 @@ Here's where we turn more to OOCSS. It's just easier to string together these mo
 ```html
 <h1 class="text--center no-padding right">
 ```
+
+## Contributing
+
+1. Fork [StratumUI](https://github.com/ritterim/StratumUI)
+2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally
+2. Run `npm install`
+3. Run `gulp`
