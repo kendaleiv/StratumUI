@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     webserver = require('gulp-webserver'),
     opn = require('opn'),
-    exec = require('child_process').exec;
+    spawn = require('spawn-cmd').spawn;
 
 var paths = {
     sassSource: 'css/scss/*.scss',
@@ -43,24 +43,35 @@ gulp.task('openbrowser', function() {
   opn('http://' + server.host + ':' + server.port + server.baseurl);
 });
 
-function runCommand(command, opts, cb) {
-  var childProcess = exec(command, opts, function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
+function runCommand(command, commandArgs, commandOpts, cb) {
+  // http://stackoverflow.com/a/10232330 but using https://www.npmjs.com/package/spawn-cmd
+  var childProcess = spawn(command, commandArgs, commandOpts);
+
+  childProcess.stdout.on('data', function (data) {
+    console.log('stdout: ' + data);
   });
 
-  childProcess.on('close', function(code) {
+  childProcess.stderr.on('data', function (data) {
+    console.log('stderr: ' + data);
+  });
+
+  childProcess.on('exit', function (code) {
+    console.log('Running ' + command +
+      ' with arguments ' + commandArgs.join(' ') +
+      ' in ' + commandOpts.cwd +
+      ' exited with code ' + code);
+
+    cb();
     process.exit(code);
   });
 }
 
 gulp.task('test', ['sass', 'webserver'], function(cb) {
-  runCommand('npm run test', { cwd: 'node_modules/backstopjs' }, cb);
+  runCommand('npm', ['run', 'test'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
 gulp.task('test-update', ['sass', 'webserver'], function(cb) {
-  runCommand('npm run reference', { cwd: 'node_modules/backstopjs' }, cb);
+  runCommand('npm', ['run', 'reference'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
 // Watch Files For Changes
