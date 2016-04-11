@@ -84,7 +84,7 @@ gulp.task('test-update', ['sass', 'webserver'], function(cb) {
   runCommand('npm', ['run', 'reference'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
-gulp.task('test-view', ['sass', 'webserver'], function(cb) {
+gulp.task('test-view', function(cb) {
   runCommand('npm', ['run', 'openReport'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
