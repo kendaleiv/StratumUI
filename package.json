@@ -6,7 +6,8 @@
   "scripts": {
     "test": "gulp test",
     "test-update": "gulp test-update",
-    "test-view": "gulp test-view"
+    "test-view": "gulp test-view",
+    "test-view-stop": "gulp test-view-stop"
   },
   "repository": {
     "type": "git",

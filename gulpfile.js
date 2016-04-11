@@ -88,6 +88,10 @@ gulp.task('test-view', ['sass', 'webserver'], function(cb) {
   runCommand('npm', ['run', 'openReport'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
+gulp.task('test-view-stop', function(cb) {
+  runCommand('npm', ['run', 'stop'], { cwd: 'node_modules/backstopjs' }, cb);
+});
+
 // Watch Files For Changes
 gulp.task('watch', function() {
   gulp.watch(paths.sassSource, ['sass']);

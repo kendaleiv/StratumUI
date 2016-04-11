@@ -5,6 +5,7 @@ setlocal
 :Build
 call npm install
 call npm test
+call npm run test-view-stop
 
 if %ERRORLEVEL% neq 0 goto BuildFail
 goto BuildSuccess
