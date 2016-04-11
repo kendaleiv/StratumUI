@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     webserver = require('gulp-webserver'),
-    opn = require('opn');
+    opn = require('opn'),
+    exec = require('child_process').exec;
 
 var paths = {
     sassSource: 'css/scss/*.scss',
@@ -40,6 +41,26 @@ gulp.task('webserver', function() {
 // open it
 gulp.task('openbrowser', function() {
   opn('http://' + server.host + ':' + server.port + server.baseurl);
+});
+
+function runCommand(command, opts, cb) {
+  var childProcess = exec(command, opts, function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
+
+  childProcess.on('close', function(code) {
+    process.exit(code);
+  });
+}
+
+gulp.task('test', ['sass', 'webserver'], function(cb) {
+  runCommand('npm run test', { cwd: 'node_modules/backstopjs' }, cb);
+});
+
+gulp.task('test-update', ['sass', 'webserver'], function(cb) {
+  runCommand('npm run reference', { cwd: 'node_modules/backstopjs' }, cb);
 });
 
 // Watch Files For Changes

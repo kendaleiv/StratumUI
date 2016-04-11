@@ -266,5 +266,6 @@ Here's where we turn more to OOCSS. It's just easier to string together these mo
 
 1. Fork [StratumUI](https://github.com/ritterim/StratumUI)
 2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally
-2. Run `npm install`
-3. Run `gulp`
+3. Run `npm install`
+4. Run `gulp`
+5. For tests, run `npm test`. This uses [BackstopJS](http://garris.github.io/BackstopJS/) to perform a UI comparison using screenshots. If visual changed are desired, run `npm run test-update` to generate new screenshots *(and, commit these new screenshots)*.

@@ -4,7 +4,8 @@
   "description": "A SASS UI framework for rapid Web, App and SPA development. No relation to stratum-framework.",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test",
+    "test-update": "gulp test-update"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/ritterim/StratumUI",
   "devDependencies": {
+    "backstopjs": "^1.2.1",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-sass": "^2.1.0",
