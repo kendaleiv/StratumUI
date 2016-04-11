@@ -67,11 +67,25 @@ function runCommand(command, commandArgs, commandOpts, cb) {
 }
 
 gulp.task('test', ['sass', 'webserver'], function(cb) {
-  runCommand('npm', ['run', 'test'], { cwd: 'node_modules/backstopjs' }, cb);
+  runCommand('npm', ['run', 'test'], { cwd: 'node_modules/backstopjs' }, function() {
+   var msg = 'View test output in the browser with: npm run test-view';
+   var dashes = '-'.repeat(msg.length);
+
+   console.log('\n' + dashes);
+   console.log(msg);
+   console.log(dashes + '\n');
+
+   cb();
+
+  });
 });
 
 gulp.task('test-update', ['sass', 'webserver'], function(cb) {
   runCommand('npm', ['run', 'reference'], { cwd: 'node_modules/backstopjs' }, cb);
+});
+
+gulp.task('test-view', ['sass', 'webserver'], function(cb) {
+  runCommand('npm', ['run', 'openReport'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
 // Watch Files For Changes

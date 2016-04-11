@@ -5,7 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "gulp test",
-    "test-update": "gulp test-update"
+    "test-update": "gulp test-update",
+    "test-view": "gulp test-view"
   },
   "repository": {
     "type": "git",
