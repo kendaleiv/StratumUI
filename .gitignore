@@ -17,3 +17,5 @@ Thumbs.db
 # Package managers
 node_modules/
 npm-debug.log
+
+backstop_data/bitmaps_test/

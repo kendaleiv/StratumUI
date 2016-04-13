@@ -1,0 +1,80 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 480,
+      "height": 1024
+    },
+    {
+      "name": "phablet",
+      "width": 765,
+      "height": 1024
+    },
+    {
+      "name": "tablet",
+      "width": 991,
+      "height": 1024
+    },
+    {
+      "name": "desktop",
+      "width": 1200,
+      "height": 1024
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Home",
+      "url": "http://localhost:6001/demos",
+      "selectors": [ "body" ],
+      "delay": 50,
+      "misMatchThreshold" : 3
+    },
+    {
+      "label": "Cards",
+      "url": "http://localhost:6001/demos/cards.html",
+      "selectors": [ "body" ],
+      "delay": 50,
+      "misMatchThreshold" : 3
+    },
+    {
+      "label": "Forms",
+      "url": "http://localhost:6001/demos/forms.html",
+      "selectors": [ "body" ],
+      "delay": 50,
+      "misMatchThreshold" : 3
+    },
+    {
+      "label": "Grid Demo",
+      "url": "http://localhost:6001/demos/grid.html",
+      "selectors": [ "body" ],
+      "delay": 50,
+      "misMatchThreshold" : 3
+    },
+    {
+      "label": "Wings",
+      "url": "http://localhost:6001/demos/wings.html",
+      "selectors": [ "body" ],
+      "delay": 50,
+      "misMatchThreshold" : 3
+    },
+    {
+      "label": "Layout",
+      "url": "http://localhost:6001/demos/layout.html",
+      "selectors": [ "body" ],
+      "delay": 50,
+      "misMatchThreshold" : 3
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../backstop_data/bitmaps_reference",
+    "bitmaps_test": "../../backstop_data/bitmaps_test",
+    "compare_data": "../../backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "../../backstop_data/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI"],
+  "cliExitOnFail": true,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3001
+}
