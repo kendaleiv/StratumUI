@@ -1,5 +1,7 @@
 # StratumUI
 
+[![npm](https://img.shields.io/npm/v/stratumui.svg)](https://www.npmjs.com/package/stratumui)
+
  A SASS UI framework for rapid Web, App and SPA development. Developed by Ritter Insurance Marketing Software Development, [RIMdev](http://rimdev.io), under the MIT license.
 
 Developed to play nicely with [Font Awesome](https://fortawesome.github.io/Font-Awesome/) :) Just include the following line in the `<head>	` of your document.
