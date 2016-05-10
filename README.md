@@ -264,6 +264,10 @@ Here's where we turn more to OOCSS. It's just easier to string together these mo
 <h1 class="text--center no-padding right">
 ```
 
+## Releasing
+
+Releases are performed automatically by continuous integration. All increments to the `package.json` version on the `master` branch will be automatically published to npm.
+
 ## Contributing
 
 1. Fork [StratumUI](https://github.com/ritterim/StratumUI)
