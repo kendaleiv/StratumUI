@@ -1,39 +1,57 @@
-.alert {color: $msg--alert-text;}
+.alert {
+  color: $msg--alert-text;
+}
+
 .alert-box {
   @include alert-box($msg--alert-text);
 }
+
 .alert-status {
   @include alert-box($msg--alert-text);
   width: auto;
   margin: 1em 3em;
 }
 
-.success {color: $msg--success-text;}
+.success {
+  color: $msg--success-text;
+}
+
 .success-box {
   @include alert-box($msg--success-text);
 }
+
 .success-status {
   @include alert-box($msg--success-text);
   width: auto;
   margin: 1em 3em;
 }
 
-.msg--warning-text {color: $msg--warning-text;}
+.msg--warning-text {
+  color: $msg--warning-text;
+}
+
 .msg--warning-text-box {
   @include alert-box($msg--warning-text);
 }
+
 .msg--warning-text-status {
   @include alert-box($msg--warning-text);
   width: auto;
   margin: 1em 3em;
 }
 
-.info {color: $msg--info-text;}
+.info {
+  color: $msg--info-text;
+}
+
 .info-box {
   @include alert-box($msg--info-text);
 }
 
-.system {color: $msg--system-text;}
+.system {
+  color: $msg--system-text;
+}
+
 .system-box {
-	@include alert-box($msg--system-text);
+  @include alert-box($msg--system-text);
 }

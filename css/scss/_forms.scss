@@ -13,10 +13,10 @@ input {
 
 .btn {
   outline: none;
-  background-color: lighten($link-active,15%);
+  background-color: lighten($link-active, 15%);
   color: $color-white;
   @include border("bottom", $link-active);
-  @include transition(all,.3s);
+  @include transition(all, 0.3s);
   &:hover {
     background-color: $link-active;
   }
@@ -69,8 +69,7 @@ input {
   width: 100%;
   input,
   select,
-  textarea
-   {
+  textarea {
     display: block;
     margin-right: $padding * 2;
     width: 100%;
@@ -82,20 +81,24 @@ input {
 
 // Focus
 input {
-  @include transition(all,.3s);
+  @include transition(all, 0.3s);
   outline: none;
   outline-color: transparent;
   &:focus {
-    @include border("bottom", lighten($msg--info-text,30%));
+    @include border("bottom", lighten($msg--info-text, 30%));
     // html5 validation trigger
-    &:invalid {outline: $msg--alert-text solid thick;}
+    &:invalid {
+      outline: $msg--alert-text solid thick;
+    }
   }
 }
 
 .focus {
-  @include transition(all,.3s);
+  @include transition(all, 0.3s);
   input {
-    &:focus {outline: $color-blue-lt solid thick;}
+    &:focus {
+      outline: $color-blue-lt solid thick;
+    }
   }
 }
 
@@ -104,17 +107,17 @@ label.select {
   @include border("bottom", $grey-light);
   padding: 0.7em 0;
   position: relative;
-  &:after {
+  &::after {
     content: "\2194";
     color: $link-active;
     @include rotate(90deg);
     right: 0.3em;
-    top: .5em;
-    padding: 0 0 .3em;
+    top: 0.5em;
+    padding: 0 0 0.3em;
     position: absolute;
     pointer-events: none;
   }
-  &:before {
+  &::before {
     content: "";
     right: 0.3em;
     top: 0;
@@ -166,31 +169,28 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -9px;
 }
 
-@mixin build-slider($slider-color:null,$slider-color-focus:null) {
-
-}
-
-
-
+// @mixin build-slider($slider-color:null, $slider-color-focus:null) {
+// }
 
 input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  border: 1px solid #000;
   height: 36px;
   width: 16px;
   border-radius: 3px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
 }
 
 /* All the same stuff for IE */
+
 input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+  border: 1px solid #000;
   height: 36px;
   width: 16px;
   border-radius: 3px;
-  background: #ffffff;
+  background: #fff;
   cursor: pointer;
 }
 
@@ -202,14 +202,14 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: lighten($msg--info-text,30%);
+  background: lighten($msg--info-text, 30%);
 }
 
 input[type=range]::-moz-range-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
   background: #3071a9;
   border-radius: 1.3px;
   border: 0.2px solid #010101;
@@ -224,15 +224,19 @@ input[type=range]::-ms-track {
   border-width: 16px 0;
   color: transparent;
 }
+
 input[type=range]::-ms-fill-lower {
   background: #2a6495;
 }
+
 input[type=range]:focus::-ms-fill-lower {
   background: #3071a9;
 }
+
 input[type=range]::-ms-fill-upper {
   background: #3071a9;
 }
+
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }

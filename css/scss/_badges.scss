@@ -27,7 +27,7 @@ span {
 .status {
   display: inline-block;
   @include border-radius(50%);
-  @include square(.5em);
+  @include square(0.5em);
   &--success {
     @extend .status;
     background: $msg--success-text;

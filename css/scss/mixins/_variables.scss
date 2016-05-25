@@ -11,7 +11,7 @@ $grey-header:   #eee;
 $color-blue:     lightsteelblue;
 $color-blue-lt:  lighten($color-blue, 15%);
 $color-white:    white;
-$color-white-alt: darken(white,3%);
+$color-white-alt: darken(white, 3%);
 
 // Border color
 $border-color: $color-blue-lt;
@@ -24,11 +24,11 @@ $msg--info-text:      dodgerblue;
 $msg--system-text:    darkmagenta;
 
 // Messages and alert boxes
-$msg--success-box:   lighten($msg--success-text,20%);
-$msg--alert-box:     lighten($msg--alert-text,20%);
-$msg--warning-box:   lighten($msg--warning-text,20%);
-$msg--info-box:      lighten($msg--info-text,20%);
-$msg--system-box:    lighten($msg--system-text,20%);
+$msg--success-box:   lighten($msg--success-text, 20%);
+$msg--alert-box:     lighten($msg--alert-text, 20%);
+$msg--warning-box:   lighten($msg--warning-text, 20%);
+$msg--info-box:      lighten($msg--info-text, 20%);
+$msg--system-box:    lighten($msg--system-text, 20%);
 
 // Links
 $link-active: $msg--info-text;

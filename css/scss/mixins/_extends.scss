@@ -1,23 +1,24 @@
 // Use @extend when in doubt, using the %placeholder syntax.
-
 %word-break {
   -ms-word-break: break-all;
-      word-break: break-all;
-      word-break: break-word;
+  word-break: break-all;
+  word-break: break-word;
   // for use on a url string
   -webkit-hyphens: auto;
-     -moz-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 %clearfix {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: table;
     content: " ";
   }
-  &:after { clear: both; }
+  &::after {
+    clear: both;
+  }
 }
 
 %hidden {
@@ -27,18 +28,18 @@
 
 %flip {
   -webkit-transform: scaleX(-1);
-     -moz-transform: scaleX(-1);
-       -o-transform: scaleX(-1);
-          transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
   -ms-filter: "FlipH";
-      filter: FlipH;
+  filter: FlipH;
 }
 
 %vertical-center {
   -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-       -o-transform: translateY(-50%);
-          transform: translateY(-50%);
-           position: relative;
-                top: 50%;
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
 }

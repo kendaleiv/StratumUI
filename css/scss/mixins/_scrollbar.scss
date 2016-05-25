@@ -1,24 +1,23 @@
-// card Scrollbar used in dashboard system. 
-
+// card Scrollbar used in dashboard system.
 $scrollbar-thumb-color: $grey-light;
 
 %scrollbar {
- // webkit and IE only
- ::-webkit-scrollbar {
-   @include square(.4em);
-   margin-right: .3em;
- }
- ::-webkit-scrollbar-thumb {
-   background: $scrollbar-thumb-color;
-   background-clip: padding-box;
-   border-radius: .5em;
- }
- ::-webkit-scrollbar-track {
-   background: none;
- }
- // For IE
- body {
-   scrollbar-face-color: $scrollbar-thumb-color;
-   scrollbar-track-color: none;
- }
+  // webkit and IE only
+  ::-webkit-scrollbar {
+    @include square(0.4em);
+    margin-right: 0.3em;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $scrollbar-thumb-color;
+    background-clip: padding-box;
+    border-radius: 0.5em;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  // For IE
+  body {
+    scrollbar-face-color: $scrollbar-thumb-color;
+    scrollbar-track-color: none;
+  }
 }

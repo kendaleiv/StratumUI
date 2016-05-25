@@ -1,6 +1,6 @@
 // Cards
-
 // Generate card sizes based on containers
+
 @include responsive-cards(0);
 
 .card {
@@ -18,7 +18,7 @@
     @include transition(all, 0.1s);
     .add {
       display: none;
-      @include transition(all,.3s);
+      @include transition(all, 0.3s);
     }
   }
   &--body {
@@ -26,7 +26,7 @@
     height: 75%; // TODO: More reliable way determine height
     padding: $padding;
     padding-left: $padding * 1.7;
-    margin-right: .2em; // Margin in place for scrollbar
+    margin-right: 0.2em; // Margin in place for scrollbar
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
@@ -36,14 +36,14 @@
       font-weight: $font--headline-weight;
       @include font-size(18px);
       margin-top: 0;
-      margin-bottom: .4em;
+      margin-bottom: 0.4em;
     }
   }
   &--image {
     display: block;
     height: 150px;
     margin-left: -1.2em;
-    margin-right: -.9em;
+    margin-right: -0.9em;
     position: relative;
     overflow: hidden;
     @include transition(all, 0.1s);
@@ -62,31 +62,33 @@
     text-transform: uppercase;
     z-index: 100;
     @include transition(all, 0.3s);
-    @include text-shadow(0px,1px,1px,darken($link-active,5%));
+    @include text-shadow(0, 1px, 1px, darken($link-active, 5%));
   }
   &.vertical {
     .card--body {
       min-height: 85%; // TODO: More reliable way determine height
-      }
     }
+  }
   &:hover {
     background: $card--foreground-color;
-    @include box-shadow(0px,0px,5px,$grey-light);
-    @include border(right,$grey-light);
+    @include box-shadow(0, 0, 5px, $grey-light);
+    @include border(right, $grey-light);
     @include border(bottom, $grey-light);
     @include transform-scale(1.05);
-    @include transition(transform,background, .3s);
+    @include transition(transform, background, 0.3s);
     position: relative;
     z-index: 200;
     .card--title {
       background: $grey-header;
-      .add {display: inline-block;}
+      .add {
+        display: inline-block;
+      }
     }
     .card--bar {
-      background-color: lighten($link-active,15%);
-      @include box-shadow(0px,0px,5px,$grey-light);
+      background-color: lighten($link-active, 15%);
+      @include box-shadow(0, 0, 5px, $grey-light);
       @include border(bottom, $link-active);
-      @include border(right, lighten($link-active,10%));
+      @include border(right, lighten($link-active, 10%));
       bottom: -37px;
       color: white;
       opacity: 1;

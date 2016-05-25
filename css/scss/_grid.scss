@@ -1,5 +1,4 @@
 /// Grid
-
 // Set grid specific extends
 %grid-defaults {
   min-height: 1px;
@@ -10,7 +9,7 @@
 // Generate columns based on grid size ($columns)
 @for $i from $columns through 1 {
   .col-#{$i} {
-  width: #{(100% / $columns) * $i};
+    width: #{(100% / $columns) * $i};
   }
 }
 
@@ -25,7 +24,7 @@
 
 // Generate containers
 @each $breakpoint in map-values($breakpoints) {
-  @media (min-width: #{$breakpoint} ) {
+  @media (min-width: #{$breakpoint}) {
     .container {
       @include transition(all, 0.3s);
       width: #{$breakpoint - $gutter};
@@ -36,15 +35,15 @@
 // Clear containers
 .container,
 .container-fluid {
-  &:after {
+  &::after {
     @extend %clearfix;
   }
 }
 
 // Set up gutters
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   @include box-sizing(border-box);
 }
 
@@ -57,7 +56,9 @@
 }
 
 // Set block level display
-div {display: block;}
+div {
+  display: block;
+}
 
 .container,
 .container-fluid {
