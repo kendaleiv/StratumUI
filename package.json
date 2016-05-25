@@ -4,6 +4,7 @@
   "description": "A SASS UI framework for rapid Web, App and SPA development. No relation to stratum-framework.",
   "main": "index.html",
   "scripts": {
+    "lint": "stylelint ./css/scss/**/*.scss --syntax scss",
     "test": "gulp test",
     "test-update": "gulp test-update",
     "test-view": "gulp test-view",
@@ -36,7 +37,9 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-webserver": "^0.9.1",
     "opn": "^4.0.1",
-    "spawn-cmd": "0.0.2"
+    "spawn-cmd": "0.0.2",
+    "stylelint": "^6.5.1",
+    "stylelint-config-standard": "^8.0.0"
   },
   "files": [
     "css",
