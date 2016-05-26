@@ -8,7 +8,6 @@ $wings-max: ($wings - $gutter) + ($wings-size * 2);
 
 .wings {
   height: 100vh;
-  float: left;
   max-width: $wings-card;
   display: inline-block;
   // Don't show wings below desktop

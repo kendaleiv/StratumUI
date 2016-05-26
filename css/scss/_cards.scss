@@ -8,7 +8,6 @@
   @include border(right);
   @include border(bottom);
   display: inline-block;
-  float: left;
   @extend %scrollbar;
   @include transition(all, 0.1s);
   &--title {
