@@ -97,14 +97,8 @@ hr {
   // Extends hr
   &.hr {
     text-align: center;
-    &--third {
-      width: 75%;
-    }
-    &--half {
-      width: 50%;
-    }
-    &--quarter {
-      width: 25%;
-    }
+    &--third { width: 75%; }
+    &--half { width: 50%; }
+    &--quarter { width: 25%; }
   }
 }
