@@ -107,7 +107,7 @@ label.select {
   @include border("bottom", $grey-light);
   padding: 0.7em 0;
   position: relative;
-  &::after {
+  &:after {
     content: "\2194";
     color: $link-active;
     @include rotate(90deg);
@@ -117,7 +117,7 @@ label.select {
     position: absolute;
     pointer-events: none;
   }
-  &::before {
+  &:before {
     content: "";
     right: 0.3em;
     top: 0;

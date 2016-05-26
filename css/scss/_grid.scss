@@ -35,15 +35,15 @@
 // Clear containers
 .container,
 .container-fluid {
-  &::after {
+  &:after {
     @extend %clearfix;
   }
 }
 
 // Set up gutters
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   @include box-sizing(border-box);
 }
 
