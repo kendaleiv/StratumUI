@@ -1,7 +1,10 @@
 // HTML elements only.
 // DO NOT include this file in a manifest if using with another framework, e.g., Bootstrap.
 
-html, body {height: 100%;}
+html,
+body {
+  height: 100%;
+}
 
 body {
   font-family: $font--body, sans-serif;
@@ -37,15 +40,21 @@ em {
 a {
   color: $link-active;
   text-decoration: none;
-  @include transition(all,0.3s);
-  &:hover {text-decoration: underline;}
+  @include transition(all, 0.3s);
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-p a { text-decoration: none;
-  &:hover { text-decoration: underline; }
+p a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
-ul, ol {
+ul,
+ol {
   margin-left: 0;
   padding-left: 1.5em;
 }
@@ -72,7 +81,9 @@ button {
   -webkit-font-smoothing: inherit;
 }
 
-small {line-height: 0.1em;}
+small {
+  line-height: 0.1em;
+}
 
 img {
   max-width: 100%;
@@ -81,13 +92,13 @@ img {
 
 hr {
   border: 0;
-  border-top: 1px solid lighten($grey-light,10%);
+  border-top: 1px solid lighten($grey-light, 10%);
   margin: 2em auto;
   // Extends hr
   &.hr {
     text-align: center;
-    &--third {width: 75%;}
-    &--half {width: 50%;}
-    &--quarter {width: 25%;}
+    &--third { width: 75%; }
+    &--half { width: 50%; }
+    &--quarter { width: 25%; }
   }
 }

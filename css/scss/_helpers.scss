@@ -1,43 +1,41 @@
 // Helper classes
 // Helper classes emulate easily recognizable css
-.left {float: left;}
-.right {float: right;}
-.none {float: none;}
-
-.inline {display: inline-block;}
-
-.no-border {border: none;}
-.no-margin {margin: 0;}
-.no-padding {padding: 0;}
-.no-scroll {overflow: hidden;}
+.left { float: left; }
+.right { float: right; }
+.none { float: none; }
+.inline { display: inline-block; }
+.no-border { border: none; }
+.no-margin { margin: 0; }
+.no-padding { padding: 0; }
+.no-scroll { overflow: hidden; }
 
 // margins (top-bottom)
 .margin-tb {
-  &-20 {margin: 20px auto;}
-  &-1 {margin: 1em auto;}
-  &-2 {margin: 2em auto;}
-  &-3 {margin: 3em auto;}
+  &-20 { margin: 20px auto; }
+  &-1 { margin: 1em auto; }
+  &-2 { margin: 2em auto; }
+  &-3 { margin: 3em auto; }
 }
 
 // padding
 .pad {
-  &-5 {padding: 5px;}
-  &-10 {padding: 10px;}
-  &-20 {padding: 20px;}
-  &-1 {padding: 1em;}
-  &-2 {padding: 2em;}
-  &-3 {padding: 3em;}
+  &-5 { padding: 5px; }
+  &-10 { padding: 10px; }
+  &-20 { padding: 20px; }
+  &-1 { padding: 1em; }
+  &-2 { padding: 2em; }
+  &-3 { padding: 3em; }
 }
 
 // border
 .border {
-  &--left {@include border("left");}
-  &--right {@include border("right");}
-  &--bottom {@include border("bottom");}
-  &--top {@include border("top");}
+  &--left { @include border("left"); }
+  &--right { @include border("right"); }
+  &--bottom { @include border("bottom"); }
+  &--top { @include border("top"); }
 }
 
-.fixed {position: fixed;}
+.fixed { position: fixed; }
 
 .group {
   display: inline-block;
@@ -47,33 +45,37 @@
 .floor {
   position: absolute;
   bottom: 0;
-  vertical-align: bottom;
 }
 
 // Generic box
 // Normalize h* tags for generic message boxes
 .generic-box {
-  h2, h3 {
+  h2,
+  h3 {
     line-height: 1em;
     margin-bottom: 0.5em;
   }
 }
 
 // Display across views
-.display-block {display: block;}
+.display-block { display: block; }
 
 // Do not show on desktop and HD
-@media (min-width: 1200px){
-  .not-desktop {display: none;}
+@media (min-width: 1200px) {
+  .not-desktop {
+    display: none;
+  }
 }
-@media (max-width: 1200px){
-  .only-desktop {display: none;}
+
+@media (max-width: 1200px) {
+  .only-desktop { display: none; }
 }
 
 // Do not show on mobile // 992 here
-@media (max-width: 992px){
-  .not-mobile {display: none;}
+@media (max-width: 992px) {
+  .not-mobile { display: none; }
 }
-@media (min-width: 992px){
-  .only-mobile {display: none;}
+
+@media (min-width: 992px) {
+  .only-mobile { display: none; }
 }

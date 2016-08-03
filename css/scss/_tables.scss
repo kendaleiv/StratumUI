@@ -1,38 +1,50 @@
 table {
   width: 100%;
-  line-height: 1,5em;
+  line-height: 1, 5em;
   margin-bottom: 2em;
-  table, th, td {
+  table,
+  th,
+  td {
     @include border("bottom", $grey-light);
     border-collapse: collapse;
   }
-  th, td {
+  th,
+  td {
     padding: 0.3em;
   }
   &.inner-borders {
-    table, td {
+    table,
+    td {
       @include border("right", $grey-light);
       // increase right pad for border
       padding-left: 0.5em;
-      &:first-of-type {padding-left: 0.3em;}
+      &:first-of-type {
+        padding-left: 0.3em;
+      }
       &:last-of-type {
         border-right: none;
       }
     }
   }
   &.text-top {
-    table, th, td {
+    table,
+    th,
+    td {
       vertical-align: text-top;
     }
   }
   &.even {
     tr {
-      &:nth-child(even) { background: $grey-lighter;}
+      &:nth-child(even) {
+        background: $grey-lighter;
+      }
     }
   }
   &.odd {
     tr {
-      &:nth-child(odd) { background: $grey-lighter;}
+      &:nth-child(odd) {
+        background: $grey-lighter;
+      }
     }
   }
 }
