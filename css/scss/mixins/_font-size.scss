@@ -1,5 +1,5 @@
 @mixin font-size($size) {
-  $rem-size: $size / 16px;
+  $rem-size: $size / 14px;
   font-size: $size; //Fallback in px
   font-size: #{$rem-size}rem;
 }
