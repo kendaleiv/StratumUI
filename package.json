@@ -1,6 +1,6 @@
 {
   "name": "stratumui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A SASS UI framework for rapid Web, App and SPA development. No relation to stratum-framework.",
   "main": "index.html",
   "scripts": {
