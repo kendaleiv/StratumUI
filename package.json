@@ -6,11 +6,7 @@
   "scripts": {
     "build": "gulp sass",
     "lint": "stylelint ./css/scss/**/*.scss --syntax scss",
-    "test": "gulp test",
-    "test-update": "gulp test-update",
-    "test-view": "gulp test-view",
-    "test-view-stop": "gulp test-view-stop",
-    "validate": "npm run build && npm run lint && npm test"
+    "validate": "npm run build && npm run lint"
   },
   "repository": {
     "type": "git",
