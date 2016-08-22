@@ -1,16 +1,12 @@
 {
   "name": "stratumui",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A SASS UI framework for rapid Web, App and SPA development. No relation to stratum-framework.",
   "main": "index.html",
   "scripts": {
     "build": "gulp sass",
     "lint": "stylelint ./css/scss/**/*.scss --syntax scss",
-    "test": "gulp test",
-    "test-update": "gulp test-update",
-    "test-view": "gulp test-view",
-    "test-view-stop": "gulp test-view-stop",
-    "validate": "npm run build && npm run lint && npm test"
+    "validate": "npm run build && npm run lint"
   },
   "repository": {
     "type": "git",
@@ -31,7 +27,6 @@
   },
   "homepage": "https://github.com/ritterim/StratumUI",
   "devDependencies": {
-    "backstopjs": "^1.2.1",
     "codemirror": "^5.13.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -39,7 +34,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-webserver": "^0.9.1",
     "opn": "^4.0.1",
-    "spawn-cmd": "0.0.2",
     "stylelint": "^7.1.0",
     "stylelint-config-standard": "^12.0.0"
   },

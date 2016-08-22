@@ -4,8 +4,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     sourcemaps = require('gulp-sourcemaps'),
     webserver = require('gulp-webserver'),
-    opn = require('opn'),
-    spawn = require('spawn-cmd').spawn;
+    opn = require('opn');
 
 var paths = {
     sassSource: 'css/scss/*.scss',
@@ -41,55 +40,6 @@ gulp.task('webserver', function() {
 // open it
 gulp.task('openbrowser', function() {
   opn('http://' + server.host + ':' + server.port + server.baseurl);
-});
-
-function runCommand(command, commandArgs, commandOpts, cb) {
-  // http://stackoverflow.com/a/10232330 but using https://www.npmjs.com/package/spawn-cmd
-  var childProcess = spawn(command, commandArgs, commandOpts);
-
-  childProcess.stdout.on('data', function (data) {
-    console.log('stdout: ' + data);
-  });
-
-  childProcess.stderr.on('data', function (data) {
-    console.log('stderr: ' + data);
-  });
-
-  childProcess.on('exit', function (code) {
-    console.log('Running ' + command +
-      ' with arguments ' + commandArgs.join(' ') +
-      ' in ' + commandOpts.cwd +
-      ' exited with code ' + code);
-
-    cb();
-    process.exit(code);
-  });
-}
-
-gulp.task('test', ['sass', 'webserver'], function(cb) {
-  runCommand('npm', ['run', 'test'], { cwd: 'node_modules/backstopjs' }, function() {
-   var msg = 'View test output in the browser with: npm run test-view';
-   var dashes = '-'.repeat(msg.length);
-
-   console.log('\n' + dashes);
-   console.log(msg);
-   console.log(dashes + '\n');
-
-   cb();
-
-  });
-});
-
-gulp.task('test-update', ['sass', 'webserver'], function(cb) {
-  runCommand('npm', ['run', 'reference'], { cwd: 'node_modules/backstopjs' }, cb);
-});
-
-gulp.task('test-view', function(cb) {
-  runCommand('npm', ['run', 'openReport'], { cwd: 'node_modules/backstopjs' }, cb);
-});
-
-gulp.task('test-view-stop', function(cb) {
-  runCommand('npm', ['run', 'stop'], { cwd: 'node_modules/backstopjs' }, cb);
 });
 
 // Watch Files For Changes

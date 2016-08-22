@@ -26,16 +26,6 @@ goto End
 
 :End
 echo.
-
-set ReturnCode=%ERRORLEVEL%
-
-call npm run test-view-stop
-
-:: node.exe continues to run on a TeamCity build agent,
-:: causing problems on the next build.
-:: This could disrupt other unrelated node.exe processes running
-:: on the machine, but it should fix this issue (for now, at least).
-call taskkill /F /IM node.exe
 popd
 
-exit /B %ReturnCode%
+exit /B %ERRORLEVEL%

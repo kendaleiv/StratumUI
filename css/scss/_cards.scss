@@ -7,7 +7,7 @@
   background: $card--background-color;
   @include border(right);
   @include border(bottom);
-  display: inline-block;
+  float: left;
   @extend %scrollbar;
   @include transition(all, 0.1s);
   &--title {
@@ -33,7 +33,7 @@
     h2 {
       font-family: $font--family;
       font-weight: $font--headline-weight;
-      @include font-size(18px);
+      @include font-size(16px);
       margin-top: 0;
       margin-bottom: 0.4em;
     }
