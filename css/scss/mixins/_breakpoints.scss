@@ -7,7 +7,7 @@ $breakpoints: (
   phablet:     765px,
   tablet:      991px,
   desktop:     1200px
-  );
+);
 
 // When we only need to return below a breakpoint
 // Usage: @media (max-width: break-target(phone))
