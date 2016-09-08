@@ -12,7 +12,7 @@
 }
 
 @mixin icon($position: before, $icon: false, $styles: true, $float:null) {
-  &:#{$position} {
+  &:#{$position} { /* stylelint-disable-line */
     @if $icon {
       content: "#{map-get($icons, $icon)}";
     }
