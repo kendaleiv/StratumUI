@@ -274,4 +274,4 @@ Releases are performed automatically by continuous integration. All increments t
 2. Clone [StratumUI](https://github.com/ritterim/StratumUI) locally
 3. Run `npm install`
 4. Run `gulp`
-5. For tests, run `npm test`. This uses [BackstopJS](http://garris.github.io/BackstopJS/) to perform a UI comparison using screenshots. If visual changed are desired, run `npm run test-update` to generate new screenshots *(and, commit these new screenshots)*.
+5. Run `npm run validate` prior to submitting a pull request
